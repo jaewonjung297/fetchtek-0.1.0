@@ -8,6 +8,7 @@ import axios from "axios";
 import { Store } from "../Store";
 import { useContext } from "react";
 import { toast } from "react-toastify";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Styles = styled.div`
     width: 12rem;
@@ -98,7 +99,7 @@ function Product(props) {
         <div className = "card-container" key = {product.slug}>
             <div key = {product.slug}>
                 <Link to = {`/product/${product.slug}`}>
-                    <img className = "phone-image" src = {product.image} alt = {product.name} />
+                    <LazyLoadImage className = "phone-image" src = {product.image} alt = {product.name} />
                 </Link>
                 <Card.Body>
                     <Link to = {`/product/${product.slug}`}>
