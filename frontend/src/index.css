@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: "Merriweather Sans";
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.site-container {
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.btn-primary {
+  /*button fror add to cart*/
+  background-color: white ;
+  color: black;
+  margin-right: 5px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  border: 1px #404040 solid;
+  margin: 2rem;
+}
+
+.product img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.product-desc {
+  padding: 2rem;
+}
+
+.rating span {
+  color: #7cc6e9
+}
+.img-large {
+  max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px;
+}
+
+.checkout-steps > div {
+  border-bottom: 0.2rem solid #a0a0a0;
+  color: #a0a0a0;
+}
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid #26a0da;
+  color: #7cc6e9;
+}
