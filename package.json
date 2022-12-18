@@ -1,0 +1,21 @@
+{
+  "name": "fetchtek",
+  "version": "1.0.0",
+  "description": "INITIAL iteration of FetchTek LLC. Website - j",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaewonjung297/fetchtek-0.1.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaewonjung297/fetchtek-0.1.0/issues"
+  },
+  "homepage": "https://github.com/jaewonjung297/fetchtek-0.1.0#readme"
+}
