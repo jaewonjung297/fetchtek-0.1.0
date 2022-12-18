@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button'
 import { useNavigate} from 'react-router-dom';
 import { Store } from '../Store';
 import { useState, useContext} from 'react';
-import { Link } from 'react-router-dom';
 
 export default function PaymentMethodPage() {
     const navigate = useNavigate();

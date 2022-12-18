@@ -127,7 +127,7 @@ export default function OrderScreen() {
           }
           loadPaypalScript();
         }
-    }, [order, userInfo, orderId, navigate, paypalDispatch]);
+    }, [order, userInfo, orderId, successPay, navigate, paypalDispatch]);
 
     return loading ? (
         <LoadingBox></LoadingBox>

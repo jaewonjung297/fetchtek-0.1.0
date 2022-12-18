@@ -72,7 +72,7 @@ export default function OrderHistoryPage() {
                     </tr>
                 </thead>
                 <tbody>
-                    {orders.map((order) => {
+                    {orders.map((order) => (
                         <tr key = {order._id}>
                             <td>{order.createdAt.substring(0, 10)}</td>
                             <td>{order.totalPrice.toFixed(2)}</td>
@@ -91,7 +91,7 @@ export default function OrderHistoryPage() {
                                     Details
                             </Button>
                         </tr>
-                    })}
+                    ))}
                 </tbody>
             </table>
         )}

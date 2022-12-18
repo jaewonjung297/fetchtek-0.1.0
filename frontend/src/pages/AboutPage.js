@@ -322,9 +322,9 @@ const TeamYusuf = () => {
     )
 } 
 
-const src = 'https://player.vimeo.com/video/735732663?h=b00d239f9e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479';
+//const src = 'https://player.vimeo.com/video/735732663?h=b00d239f9e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479';
 
-const Autoloop = () => {
+/*const Autoloop = () => {
     return (
         <Styles>
             <div id="background" className='autoLoopHero'>
@@ -353,6 +353,7 @@ const Autoloop = () => {
         </Styles>
     )
 }
+*/
 
 const AboutUsEffect = () => {
     useEffect(() => {

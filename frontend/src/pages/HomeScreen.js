@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer} from "react";
 //import data from "../data";
 import axios from 'axios';
 import Product from "../components/Product";
@@ -27,17 +27,14 @@ const Styles = styled.div`
             font-size: 2.5rem;
         }
     }
-    img {
-        width: 120%;
-    }
     .background-lg {
         display: flex;
         flex-direction: column;
         align-items: center;
         position:relative
         object-fit: contain;
-        width: 100%;
-        height: 100%;
+        width: 120%;
+        height: auto;
         border-radius: 1.2%
         margin-bottom: 50px;
     }
@@ -46,9 +43,9 @@ const Styles = styled.div`
         flex-direction: column;
         align-items: center;
         position:relative
-        object-fit: contain;
-        width: 100%;
-        height: 20%
+        object-fit: contain;        
+        width: 120%;
+        height: auto
         border-radius: 1.2%;
     }
     h1 span {
@@ -170,9 +167,8 @@ function HomePage() {
 	}, [])
     return (
 		<Styles>
-            <Styles>
                 <div className = "container-lg">
-                    <img src = {background} className = "background-lg"/>
+                    <img src = {background} alt = "background" className = "background-lg"/>
                     <div style = {{position: "absolute", top: "35%", justifyContent: "center"}}>
                         <h1 style = {{color: "white", fontSize: "4.5vw", maxWidth:"950px", marginBottom: "2vw"}}>Buy and <span>Sell</span> Your Electronics</h1>
                         <div style = {{maxWidth: "20vw"}}id="btn"><span class="noselect">Shop Now</span><div id="circle"></div></div>
@@ -180,14 +176,13 @@ function HomePage() {
                     </div>
                 </div>
                 <div className = "container-sm">
-                    <img src = {backgroundsm} className = "background-sm"/>
+                    <img src = {backgroundsm} alt = "background" className = "background-sm"/>
                     <h1 style = {{position: "absolute", top: "12%", color: "black", fontSize: "10vw", maxWidth: "75vw"}}>Buy and <span>Sell </span>Your Electronics</h1>
                     <div style = {{position: "absolute", top: "76%", justifyContent: "center"}}>
                         <div style = {{maxWidth: "20vw"}}id="btn"><span class="noselect">Shop Now</span><div id="circle"></div></div>
                         <div style = {{maxWidth: "20vw", marginTop: "2vw", backgroundColor: "#e6ffff"}}id="btn"><span class="noselect">Sell With Us</span><div id="circle"></div></div>
                     </div>
                 </div>
-            </Styles>
 			<h2 style = {{marginTop: "100px"}}>Featured Products</h2>
             {loading ? (
                 <LoadingBox />

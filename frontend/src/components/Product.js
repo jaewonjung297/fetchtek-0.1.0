@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Rating from "./Rating";
 import styled from "styled-components";
 import { animated, useSpring } from 'react-spring';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { Store } from "../Store";
 import { useContext } from "react";
@@ -72,7 +70,6 @@ function Product(props) {
     }
 
     const [hovered, setHovered] = useState(false);
-    const navigate = useNavigate();
 
     const springStyle = useSpring({
       from: {
