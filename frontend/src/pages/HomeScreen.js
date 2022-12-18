@@ -5,8 +5,8 @@ import Product from "../components/Product";
 import styled from 'styled-components'
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox"
-import background from '../images/background.jpg';
-import backgroundsm from '../images/background-sm.jpg';
+import background from '../images/background.webp';
+import backgroundsm from '../images/background-sm.webp';
 const Styles = styled.div`
     display: flex;
     flex-direction: column;
