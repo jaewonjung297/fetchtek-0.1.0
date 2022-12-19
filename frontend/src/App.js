@@ -22,6 +22,9 @@ import logo from '../src/images/FetchTek-Logo.png';
 import styled from 'styled-components';
 import OrderPage from './pages/OrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
+import ProfilePage from './pages/ProfilePage';
+import ProfileViewPage from './pages/ProfileViewPage';
+import HowItWorksPage from './pages/HowItWorksPage';
 
 const Styles = styled.div`
   .navbar {
@@ -59,6 +62,7 @@ function App() {
     ctxDispatch({type: 'USER_SIGNOUT'});
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress')
+    window.location.href = '/signin';
   };
   return (
     <BrowserRouter>
@@ -103,12 +107,17 @@ function App() {
                     About Us
                   </Link>
                 </Nav>
+                <Nav className = "me-auto">
+                  <Link to ="/how" className = "nav-link">
+                    How It Works
+                  </Link>
+                </Nav>
               </Container>
             </Navbar>
           </Styles>
         </header>
         <main>
-          <Container className="mt-3">
+          <div>
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/" element={<HomeScreen />} />
@@ -121,8 +130,11 @@ function App() {
               <Route path = '/placeorder' element = {<PlaceOrderPage />} />
               <Route path = '/order/:id' element = {<OrderPage />} />
               <Route path = '/orderhistory' element = {<OrderHistoryPage />} />
+              <Route path = '/profile' element = {<ProfileViewPage />} />
+              <Route path = '/editprofile' element = {<ProfilePage />} />
+              <Route path = '/how' element = {<HowItWorksPage />} />
             </Routes>
-          </Container>
+          </div>
         </main>
         <footer>
           <div className="text-center">All rights reserved</div>

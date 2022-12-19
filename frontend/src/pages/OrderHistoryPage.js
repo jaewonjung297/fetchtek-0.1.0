@@ -7,6 +7,7 @@ import { Store } from '../Store';
 import { getError } from '../utils';
 import Button from 'react-bootstrap/Button'
 import axios from 'axios';
+import Container from 'react-bootstrap/Container';
 
 
 const reducer = (state, action) => {
@@ -50,7 +51,7 @@ export default function OrderHistoryPage() {
         fetchData();
     }, [userInfo]);
   return (
-    <div>
+    <Container className="mt-3">
         <Helmet>
             <title>Order History</title>
         </Helmet>
@@ -95,6 +96,6 @@ export default function OrderHistoryPage() {
                 </tbody>
             </table>
         )}
-    </div>
+    </Container>
   )
 }
