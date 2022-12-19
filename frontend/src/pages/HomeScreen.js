@@ -83,7 +83,7 @@ function HomePage() {
                 <MessageBox varaint = "danger">{error}</MessageBox>
             ) : (
                 <div data-aos="fade-left" data-aos-delay={200} className = "products">
-                {products.slice(1, 6).filter(product => product.brand == "Apple").map(product => (
+                {products.slice(1, 6).filter(product => product.brand === "Apple").map(product => (
                     <Product product = {product}></Product>
                     ))}
                 </div>
