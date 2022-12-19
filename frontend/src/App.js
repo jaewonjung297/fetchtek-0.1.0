@@ -77,8 +77,17 @@ function App() {
                     <img src = {logo} width = "100px" position = "auto" alt = "FetchTek Logo"></img>
                   </Navbar.Brand>
                 </LinkContainer>
-                <Nav className = "me-auto">
-                  <Link to="/cart" className ="nav-link">
+                <Nav className = "p-2">
+                  <Link to ="/about" className = "nav-link">
+                    About Us
+                  </Link>
+                </Nav>
+                <Nav className = "p-2">
+                  <Link to ="/how" className = "nav-link">
+                    How It Works
+                  </Link>
+                </Nav>
+                <Link to="/cart" className =" ms-auto nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg = "danger">
@@ -86,6 +95,7 @@ function App() {
                       </Badge>
                     )}
                   </Link>
+                  <Nav>
                   {userInfo ? (
                     <NavDropDown title = {userInfo.name} id = "basic-nav-dropdown">
                       <LinkContainer to = "/profile">
@@ -101,16 +111,6 @@ function App() {
                   (
                   <Link className = "nav-link" to = "/signin">Sign In</Link>
                   )}
-                </Nav>
-                <Nav className = "me-auto">
-                  <Link to ="/about" className = "nav-link">
-                    About Us
-                  </Link>
-                </Nav>
-                <Nav className = "me-auto">
-                  <Link to ="/how" className = "nav-link">
-                    How It Works
-                  </Link>
                 </Nav>
               </Container>
             </Navbar>
