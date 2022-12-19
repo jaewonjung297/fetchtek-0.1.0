@@ -13,6 +13,7 @@ import MessageBox from '../components/MessageBox'
 import LoadingBox from '../components/LoadingBox'
 import { getError } from '../utils';
 import { Store } from '../Store';
+import Container from 'react-bootstrap/Container';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -71,16 +72,16 @@ function ProductScreen() {
 ) : error ? (
   <MessageBox variant = "danger">{error}</MessageBox>
 ) : (
-    <div>
+    <Container>
       <Row>
-        <Col md={6}>
+        <Col style = {{backgroundColor: "white"}} md={2}>
           <img
-            className="img-large"
+            style = {{width: "7rem", height: "auto", alignSelf: "center"}}
             src={product.image}
             alt={product.name}
           ></img>
         </Col>
-        <Col md={3}>
+        <Col md={6}>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Helmet>
@@ -136,7 +137,7 @@ function ProductScreen() {
           </Card>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 }
 export default ProductScreen;

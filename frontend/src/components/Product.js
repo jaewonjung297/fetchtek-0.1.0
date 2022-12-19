@@ -20,7 +20,7 @@ const Styles = styled.div`
     justify-content: center;
     align-items: center;
     margin: 1rem 1rem 1rem 1rem;
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 2rem 0 0.5rem 0;
     box-shadow: 2px 4px 2px rgba(232, 234, 237, 0.3);
     text-align: center;
     
@@ -34,17 +34,34 @@ const Styles = styled.div`
         font-size: 1.1rem;
     }
     .phone-image {
-        height: 13em;
+        height: 10em;
         width: auto;
         object-fit: scale-down;
-        margin-bottom: 0.5em;
+        object-position: center center;
+        margin-bottom: 3.5em;
     }
-
     @media only screen and (max-width: 650px) {
+        .phone-image{
+            display: block;
+            height: 7em;
+            width: auto;
+            object-fit: scale-down;
+            object-position: center center;
+            margin-bottom: 3.5em;
+            padding-left: 0.2em;
+        }
         width: 9rem;
     }
     @media only screen and (max-width: 400px) {
         width: 8rem;
+        .phone-image{
+            display: block;
+            height: 6em;
+            width: auto;
+            object-fit: scale-down;
+            object-position: center center;
+            margin-bottom: 3.5em;
+        }
     }
  
 `;
@@ -96,7 +113,7 @@ function Product(props) {
 
     return (
       <Styles as={animated.div} style={springStyle} onMouseEnter={triggerIn} onMouseLeave={triggerOut}>
-        <div className = "card-container" key = {product.slug}>
+        <div style = {{paddingLeft: "1em", paddingRight: "1em"}}key = {product.slug}>
             <div key = {product.slug}>
                 <Link to = {`/product/${product.slug}`}>
                     <LazyLoadImage className = "phone-image" src = {product.image} alt = {product.name} />
