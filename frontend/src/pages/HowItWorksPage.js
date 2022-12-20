@@ -118,7 +118,7 @@ export default function HowItWorksPage() {
         <div className = "container-lg">
             <img src = {background} alt = "background" className = "background-lg"/>
             <div style = {{position: "absolute", top: "35%", justifyContent: "center"}}>
-                <h1 style = {{color: "white", fontSize: "4.5vw", maxWidth:"950px", marginBottom: "2vw"}}>We Make<span> Fetching</span> Electronics Easuer</h1>
+                <h1 style = {{color: "white", fontSize: "4.5vw", maxWidth:"950px", marginBottom: "2vw"}}>We Make<span> Fetching</span> Electronics Easier</h1>
             </div>
         </div>
         <div className = "container-sm">
