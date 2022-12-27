@@ -13,6 +13,7 @@ import { toast } from 'react-toastify';
 import { getError } from '../utils';
 import axios from 'axios';
 import LoadingBox from '../components/LoadingBox';
+import Container from 'react-bootstrap/Container';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -84,7 +85,7 @@ export default function PlaceOrderScreen() {
   }, [cart, navigate]);
 
   return (
-    <div>
+    <Container className="small-container">
       <CheckOutSteps step1 step2 step3 step4></CheckOutSteps>
       <Helmet>
         <title>Preview Order</title>
@@ -194,6 +195,6 @@ export default function PlaceOrderScreen() {
           </Card>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 }

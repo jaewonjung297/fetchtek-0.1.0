@@ -7,7 +7,8 @@ import bcrypt from 'bcryptjs';
 const userRouter = express.Router();
 
 userRouter.post(
-    '/signin', expressAsyncHandler(async (req, res) => {
+    '/signin', 
+    expressAsyncHandler(async (req, res) => {
         const user = await User.findOne({ email: req.body.email });
         if (user) {
             if (bcrypt.compareSync(req.body.password, user.password)) {

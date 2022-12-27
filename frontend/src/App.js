@@ -25,6 +25,8 @@ import OrderHistoryPage from './pages/OrderHistoryPage';
 import ProfilePage from './pages/ProfilePage';
 import ProfileViewPage from './pages/ProfileViewPage';
 import HowItWorksPage from './pages/HowItWorksPage';
+import QuotePhone from './pages/Pricing/QuotePhone';
+import PricePage from './pages/Pricing/PricePage';
 
 const Styles = styled.div`
   .navbar {
@@ -87,6 +89,11 @@ function App() {
                     How It Works
                   </Link>
                 </Nav>
+                <Nav className = "p-2">
+                  <Link to ="/quote" className = "nav-link">
+                    Get a Quote
+                  </Link>
+                </Nav>
                 <Link to="/cart" className =" ms-auto nav-link">
                     Cart
                     {cart.cartItems.length > 0 && (
@@ -133,6 +140,8 @@ function App() {
               <Route path = '/profile' element = {<ProfileViewPage />} />
               <Route path = '/editprofile' element = {<ProfilePage />} />
               <Route path = '/how' element = {<HowItWorksPage />} />
+              <Route path = '/quote' element = {<QuotePhone/>} />
+              <Route path = '/quoteprice' element = {<PricePage />} />
             </Routes>
           </div>
         </main>
