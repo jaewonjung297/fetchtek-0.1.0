@@ -54,6 +54,7 @@ const Styles = styled.div`
     left: 25%;
     right: 25%;
   }
+  
 `;
 
 function App() {
@@ -72,53 +73,65 @@ function App() {
       <ToastContainer position = "bottom-center" limit = {1} />
         <header>
             <Styles>
-            <Navbar expane = "lg">
+            <Navbar collapseOnSelect expand = "lg">
               <Container>
-                <LinkContainer to="/">
+                <LinkContainer eventKey = '/' to="/">
                   <Navbar.Brand>
                     <img src = {logo} width = "100px" position = "auto" alt = "FetchTek Logo"></img>
                   </Navbar.Brand>
                 </LinkContainer>
-                <Nav className = "p-2">
-                  <Link to ="/about" className = "nav-link">
-                    About Us
-                  </Link>
-                </Nav>
-                <Nav className = "p-2">
-                  <Link to ="/how" className = "nav-link">
-                    How It Works
-                  </Link>
-                </Nav>
-                <Nav className = "p-2">
-                  <Link to ="/quote" className = "nav-link">
-                    Get a Quote
-                  </Link>
-                </Nav>
-                <Link to="/cart" className =" ms-auto nav-link">
-                    Cart
-                    {cart.cartItems.length > 0 && (
-                      <Badge pill bg = "danger">
-                        {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                      </Badge>
+
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+
+                    <Nav className = "p-2">
+                      <Nav.Link as = {Link} to ="/about" eventKey = '/about' className = "nav-link">
+                        About Us
+                      </Nav.Link>
+                    </Nav>
+
+                    <Nav className = "p-2">
+                      <Nav.Link as = {Link}  to ="/how" eventKey = '/how' className = "nav-link">
+                        How It Works
+                      </Nav.Link>
+                    </Nav>
+
+                    <Nav className = "p-2">
+                      <Nav.Link as = {Link}  to ="/quote" eventKey = '/quote' className = "nav-link">
+                        Get a Quote
+                      </Nav.Link>
+                    </Nav>
+
+                    <Nav className = "p-2">
+                      <Nav.Link as = {Link} eventKey = '/cart' to="/cart" className ="nav-link">
+                          Cart
+                          {cart.cartItems.length > 0 && (
+                            <Badge pill bg = "danger">
+                              {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                            </Badge>
+                          )}
+                      </Nav.Link>
+                    </Nav>
+
+                    <Nav className = "p-2">
+                    {userInfo ? (
+                      <NavDropDown title = "Your Account" id = "basic-nav-dropdown">
+                        <LinkContainer to = "/profile">
+                          <NavDropDown.Item>User Profile</NavDropDown.Item>
+                        </LinkContainer>
+                        <LinkContainer to = "/orderhistory">
+                          <NavDropDown.Item>Order History</NavDropDown.Item>
+                        </LinkContainer>
+                        <NavDropDown.Divider />
+                        <Nav.Link as = {Link} eventKey = '#signout' className = "p-3 dropdown-item" to = "#signout" onClick = {signOutHandler}>Sign Out</Nav.Link>
+                        
+                      </NavDropDown>
+                    ) : 
+                    (
+                    <Nav.Link as = {Link} eventKey = '/signin' className = "nav-link" to = "/signin">Sign In</Nav.Link>
                     )}
-                  </Link>
-                  <Nav>
-                  {userInfo ? (
-                    <NavDropDown title = {userInfo.name} id = "basic-nav-dropdown">
-                      <LinkContainer to = "/profile">
-                        <NavDropDown.Item>User Profile</NavDropDown.Item>
-                      </LinkContainer>
-                      <LinkContainer to = "/orderhistory">
-                        <NavDropDown.Item>Order History</NavDropDown.Item>
-                      </LinkContainer>
-                      <NavDropDown.Divider />
-                      <Link className = "dropdown-item" to = "#signout" onClick = {signOutHandler}>Sign Out</Link>
-                    </NavDropDown>
-                  ) : 
-                  (
-                  <Link className = "nav-link" to = "/signin">Sign In</Link>
-                  )}
-                </Nav>
+                  </Nav>
+                </Navbar.Collapse>
               </Container>
             </Navbar>
           </Styles>
