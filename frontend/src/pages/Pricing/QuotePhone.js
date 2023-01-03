@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom';
 import { RadioGroup, FormControl, FormLabel, FormControlLabel, Radio } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 const Styles = styled.div`
   .brand {
@@ -55,12 +56,12 @@ const phoneOptions = {
 export default function QuotePhone() {
   const navigate = useNavigate();
   const [brandOptions, setBrandOptions] = useState([]);
-  const [nextStep, setNextStep] = useState(true);
-  const [nextStep2, setNextStep2] = useState(true);
-  const [nextStep3, setNextStep3] = useState(true);
-  const [nextStep4, setNextStep4] = useState(true);
-  const [nextStep5, setNextStep5] = useState(true);
-  const [nextStep6, setNextStep6] = useState(true);
+  const [nextStep, setNextStep] = useState(false);
+  const [nextStep2, setNextStep2] = useState(false);
+  const [nextStep3, setNextStep3] = useState(false);
+  const [nextStep4, setNextStep4] = useState(false);
+  const [nextStep5, setNextStep5] = useState(false);
+  const [nextStep6, setNextStep6] = useState(false);
 
   const selectedBrand = (e) => {
     const input = e.target.value;
@@ -156,19 +157,19 @@ export default function QuotePhone() {
                     name="radio-buttons-group"
                   >
                     <div className = "radio">
-                      <FormControlLabel value="Flawless" onChange = {selectedScreen} control={<Radio />} label="Flawless" />
+                      <FormControlLabel value="Flawless" onChange = {selectedScreen} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Flawless</Typography>}/>
                       Flawless appearance with no visible scratches. Screen has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels), and the touchscreen works
                     </div>
                     <div className = "radio">
-                      <FormControlLabel value="Good" onChange = {selectedScreen} control={<Radio />} label="Good" />
+                      <FormControlLabel value="Good" onChange = {selectedScreen} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Good</Typography>}/>
                       A few faint signs of wear, not noticeable from 8 inches away. No cracks or dents. Screen has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels) and the touchscreen works
                     </div>
                     <div className = "radio">
-                      <FormControlLabel value="Used" onChange = {selectedScreen} control={<Radio />} label="Used" />
+                      <FormControlLabel value="Used" onChange = {selectedScreen} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Used</Typography>}/>
                       Visible signs of wear, including deep scratches and/or dents on the outside of the device, which do not affect its functionality. No cracks. Screen has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels) and the touchscreen works.
                     </div>
                     <div className = "radio">
-                      <FormControlLabel value="Cracked" onChange = {selectedScreen} control={<Radio />} label="Cracked" />
+                      <FormControlLabel value="Cracked" onChange = {selectedScreen} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Cracked</Typography>}/>
                       Has one or more cracks and may or may not be 100% functional. Note a screen that is 100% functional has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels) and the touchscreen works
                     </div>
                   </RadioGroup>
@@ -188,19 +189,19 @@ export default function QuotePhone() {
                     name="radio-buttons-group"
                   >
                     <div className = "radio">
-                      <FormControlLabel value="Flawless" onChange = {selectedBody} control={<Radio />} label="Flawless" />
+                      <FormControlLabel value="Flawless" onChange = {selectedBody} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Flawless</Typography>} />
                       Flawless appearance with no visible scratches.
                     </div>
                     <div className = "radio">
-                      <FormControlLabel value="Good" onChange = {selectedBody} control={<Radio />} label="Good" />
+                      <FormControlLabel value="Good" onChange = {selectedBody} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Good</Typography>} />
                       A few faint signs of wear, not noticeable from 8 inches away. No cracks or dents.
                     </div>
                     <div className = "radio">
-                      <FormControlLabel value="Used" onChange = {selectedBody} control={<Radio />} label="Used" />
+                      <FormControlLabel value="Used" onChange = {selectedBody} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Used</Typography>} />
                       Visible signs of wear, including deep scratches and/or dents on the outside of the device, which do not affect its functionality. No cracks.
                     </div>
                     <div className = "radio">
-                      <FormControlLabel value="Cracked" onChange = {selectedBody} control={<Radio />} label="Cracked" />
+                      <FormControlLabel value="Cracked" onChange = {selectedBody} control={<Radio />} label={<Typography style={{fontSize: "1.1rem", fontWeight: "bolder"}}>Cracked</Typography>} />
                       Shows visible signs of wear, including deep scratches, cracks and/or dents on the outside of the item.
                     </div>
                   </RadioGroup>
