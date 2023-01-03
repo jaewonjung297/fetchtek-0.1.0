@@ -44,11 +44,11 @@ export default function PricePage() {
     const submitHandler = () => {
         setSubmit(false);
       }
+    var formattedBody = `Offer Price: $500 \n\nDevice Information:\nBrand: ${localStorage.getItem('brand')} \nModel: ${localStorage.getItem('model')} \nCarrier: ${localStorage.getItem('carrier')} \nScreen Condition: ${localStorage.getItem('screen')} \nBody Condition: ${localStorage.getItem('body')} \nFunctional: ${localStorage.getItem('functional')}`;
+    const whatsAppLink = 'https://wa.me/19199013885?text=' + encodeURIComponent(formattedBody);
     const emailHandler = () => {
-        window.open('mailto:fetchtek@gmail.com?subject=%20Trade-in%20Offer&body=')
-    }
-    const whatsAppHandler = () => {
-        window.open(<a href="https://api.whatsapp.com/send?phone=15551234567">Send Message</a>)
+        var mailToLink = "mailto:fetchtek@gmail.com?subject=Trade-in%20Offer&body=" + encodeURIComponent(formattedBody);
+        window.open(mailToLink)
     }
     return (
     <Styles>
@@ -65,11 +65,11 @@ export default function PricePage() {
                 <div className = "contact">
                     Contact us to complete your offer!
                     <div>
-                    <IconButton size="large" href = "https://api.whatsapp.com/send?phone=19199013885">
-                        <WhatsAppIcon />
+                    <IconButton size="large" href = 'https://wa.me/19199013885'>
+                        <WhatsAppIcon style = {{fontSize: "45px"}}/>
                     </IconButton>
                     <IconButton size="large" onClick={emailHandler}>
-                        <MailIcon />
+                        <MailIcon style = {{fontSize:"45px"}}/>
                     </IconButton>
                     </div>
                 </div>

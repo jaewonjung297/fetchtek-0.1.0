@@ -55,12 +55,12 @@ const phoneOptions = {
 export default function QuotePhone() {
   const navigate = useNavigate();
   const [brandOptions, setBrandOptions] = useState([]);
-  const [nextStep, setNextStep] = useState(false);
-  const [nextStep2, setNextStep2] = useState(false);
-  const [nextStep3, setNextStep3] = useState(false);
-  const [nextStep4, setNextStep4] = useState(false);
-  const [nextStep5, setNextStep5] = useState(false);
-  const [nextStep6, setNextStep6] = useState(false);
+  const [nextStep, setNextStep] = useState(true);
+  const [nextStep2, setNextStep2] = useState(true);
+  const [nextStep3, setNextStep3] = useState(true);
+  const [nextStep4, setNextStep4] = useState(true);
+  const [nextStep5, setNextStep5] = useState(true);
+  const [nextStep6, setNextStep6] = useState(true);
 
   const selectedBrand = (e) => {
     const input = e.target.value;
@@ -177,7 +177,7 @@ export default function QuotePhone() {
             )}
             {nextStep4 && (
               <div className = 'model'>
-                <h4>
+                <h4 style = {{maxWidth: "80%"}}>
                   What is the condition of the sides and back?
                 </h4>
 
