@@ -193,7 +193,7 @@ const Styles = styled.div`
                                 <div className='missionContent'>
                                     <h1 className='missionTitle aos-animate aos-init' data-aos="fade-right">
                                         FetchTek is 
-                                        <span> revolutionising </span>
+                                        <span> revolutionizing </span>
                                         existing tech marketplaces
                                     </h1>
                                 </div>

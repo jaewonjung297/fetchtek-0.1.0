@@ -80,19 +80,21 @@ export default function ProfileScreen() {
       ctxDispatch({ type: 'USER_SIGNIN', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
       toast.success('User updated successfully');
+      navigate('/profile')
     } catch (err) {
       dispatch({
         type: 'FETCH_FAIL',
       });
       toast.error(getError(err));
     }
+
   };
 
   return (
     <Styles>
         <div className="container small-container">
         <Helmet>
-            <title>Edot Profile</title>
+            <title>Edit Profile</title>
         </Helmet>
         <h1>Edit Profile</h1>
         <form onSubmit={submitHandler}>
@@ -128,7 +130,7 @@ export default function ProfileScreen() {
             />
             </Form.Group>
             <div className="mb-3">
-            <Button onClick = {returnHandler}type="submit">Update</Button>
+            <Button onClick = {submitHandler} type="submit">Update</Button>
             </div>
         </form>
         </div>
