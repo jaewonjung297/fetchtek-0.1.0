@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button'
 import { useNavigate } from 'react-router-dom';
+import { RadioGroup, FormControl, FormLabel, FormControlLabel, Radio } from '@mui/material';
 
 const Styles = styled.div`
   .brand {
@@ -31,6 +32,18 @@ const Styles = styled.div`
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+  }
+  .radio {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid black;
+    padding: 15px;
+    border-radius: 4.5px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    max-width: 60em;
   }
 `
 
@@ -136,14 +149,30 @@ export default function QuotePhone() {
                 <h4>
                   What is the condition of the screen?
                 </h4>
-                <select className = "modelSelect" onChange = {selectedScreen}>
-                  <option>Select your Screen Condition</option>
-                  <option>Flawless</option>
-                  <option>Good</option>
-                  <option>Used</option>
-                  <option>Cracked</option>
-                  <option>Heavily Cracked</option>
-                </select>
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="flawless"
+                    name="radio-buttons-group"
+                  >
+                    <div className = "radio">
+                      <FormControlLabel value="Flawless" onChange = {selectedScreen} control={<Radio />} label="Flawless" />
+                      Flawless appearance with no visible scratches. Screen has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels), and the touchscreen works
+                    </div>
+                    <div className = "radio">
+                      <FormControlLabel value="Good" onChange = {selectedScreen} control={<Radio />} label="Good" />
+                      A few faint signs of wear, not noticeable from 8 inches away. No cracks or dents. Screen has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels) and the touchscreen works
+                    </div>
+                    <div className = "radio">
+                      <FormControlLabel value="Used" onChange = {selectedScreen} control={<Radio />} label="Used" />
+                      Visible signs of wear, including deep scratches and/or dents on the outside of the device, which do not affect its functionality. No cracks. Screen has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels) and the touchscreen works.
+                    </div>
+                    <div className = "radio">
+                      <FormControlLabel value="Cracked" onChange = {selectedScreen} control={<Radio />} label="Cracked" />
+                      Has one or more cracks and may or may not be 100% functional. Note a screen that is 100% functional has no defective pixels (e.g. ghost touch, screen burn-in, dead pixels) and the touchscreen works
+                    </div>
+                  </RadioGroup>
+                </FormControl>
               </div>
             )}
             {nextStep4 && (
@@ -151,24 +180,46 @@ export default function QuotePhone() {
                 <h4>
                   What is the condition of the sides and back?
                 </h4>
-                <select className = 'modelSelect' onChange = {selectedBody}>
-                  <option>Select your Body Condition</option>
-                  <option>Flawless</option>
-                  <option>Good</option>
-                  <option>Used</option>
-                  <option>Cracked</option>
-                  <option>Heavily Cracked</option>
-                </select>
+
+                <FormControl>
+                  <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="flawless"
+                    name="radio-buttons-group"
+                  >
+                    <div className = "radio">
+                      <FormControlLabel value="Flawless" onChange = {selectedBody} control={<Radio />} label="Flawless" />
+                      Flawless appearance with no visible scratches.
+                    </div>
+                    <div className = "radio">
+                      <FormControlLabel value="Good" onChange = {selectedBody} control={<Radio />} label="Good" />
+                      A few faint signs of wear, not noticeable from 8 inches away. No cracks or dents.
+                    </div>
+                    <div className = "radio">
+                      <FormControlLabel value="Used" onChange = {selectedBody} control={<Radio />} label="Used" />
+                      Visible signs of wear, including deep scratches and/or dents on the outside of the device, which do not affect its functionality. No cracks.
+                    </div>
+                    <div className = "radio">
+                      <FormControlLabel value="Cracked" onChange = {selectedBody} control={<Radio />} label="Cracked" />
+                      Shows visible signs of wear, including deep scratches, cracks and/or dents on the outside of the item.
+                    </div>
+                  </RadioGroup>
+                </FormControl>
               </div>
             )}
             {nextStep5 && (
               <div className = 'model'>
                 <h4>Is the phone functional?</h4>
-                <select className = 'modelSelect' onChange = {selectedFunctional}>
-                  <option>Select an option</option>
-                  <option>Yes</option>
-                  <option>No</option>
-                </select>
+                <FormControl>
+                  <RadioGroup
+                    row
+                    aria-labelledby="demo-row-radio-buttons-group-label"
+                    name="row-radio-buttons-group"
+                  >
+                    <FormControlLabel value="Yes" onChange = {selectedFunctional} control={<Radio />} label="Yes" />
+                    <FormControlLabel value="No" onChange = {selectedFunctional} control={<Radio />} label="No" />
+                  </RadioGroup>
+                </FormControl>
               </div>
             )}
             {nextStep6 && (
