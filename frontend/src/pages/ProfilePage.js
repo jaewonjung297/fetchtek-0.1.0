@@ -56,9 +56,6 @@ export default function ProfileScreen() {
     loadingUpdate: false,
   });
 
-  const returnHandler = () => {
-    navigate('/profile')
-  }
 
   const submitHandler = async (e) => {
     e.preventDefault();

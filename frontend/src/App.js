@@ -27,6 +27,8 @@ import ProfileViewPage from './pages/ProfileViewPage';
 import HowItWorksPage from './pages/HowItWorksPage';
 import QuotePhone from './pages/Pricing/QuotePhone';
 import PricePage from './pages/Pricing/PricePage';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import PersonIcon from '@mui/icons-material/Person';
 
 const Styles = styled.div`
   .navbar {
@@ -104,7 +106,7 @@ function App() {
 
                     <Nav className = "p-2">
                       <Nav.Link as = {Link} eventKey = '/cart' to="/cart" className ="nav-link">
-                          Cart
+                          <ShoppingCartIcon />
                           {cart.cartItems.length > 0 && (
                             <Badge pill bg = "danger">
                               {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
@@ -115,7 +117,7 @@ function App() {
 
                     <Nav className = "p-2">
                     {userInfo ? (
-                      <NavDropDown title = "Your Account" id = "basic-nav-dropdown">
+                      <NavDropDown title = {<PersonIcon />} id = "basic-nav-dropdown">
                         <LinkContainer to = "/profile">
                           <NavDropDown.Item>User Profile</NavDropDown.Item>
                         </LinkContainer>
@@ -159,7 +161,7 @@ function App() {
           </div>
         </main>
         <footer>
-          <div className="text-center">All rights reserved</div>
+          <div className="text-center" style = {{marginTop: "5em"}}>All rights reserved</div>
         </footer>
       </div>
     </BrowserRouter>
