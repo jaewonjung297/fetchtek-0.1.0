@@ -88,7 +88,7 @@ function App() {
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className = "p-2">
-                      <Nav.Link as = {Link} to ="/landing" eventKey = '/landing' className = "nav-link">
+                      <Nav.Link as = {Link} to ="/about" eventKey = '/about' className = "nav-link">
                         About Us
                       </Nav.Link>
                     </Nav>
@@ -143,7 +143,6 @@ function App() {
           <div>
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
-              <Route path="/" element={<HomeScreen />} />
               <Route path = "/cart" element = {<CartPage />} />
               <Route path = "/about" element = {<AboutPage />} />
               <Route path = "/signin" element = {<SignInPage />} />
@@ -158,7 +157,7 @@ function App() {
               <Route path = '/how' element = {<HowItWorksPage />} />
               <Route path = '/quote' element = {<QuotePhone/>} />
               <Route path = '/quoteprice' element = {<PricePage />} />
-              <Route path = '/landing' element = {<Landing />} />
+              <Route path = '/' element = {<Landing />} />
             </Routes>
           </div>
         </main>

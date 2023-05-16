@@ -261,7 +261,7 @@ export default function Landing() {
                 FetchTek was created and developed for the purpose of a platform that unifies the tech market and simplies the trade of electronics. Our mission is to build the world’s most convenient way to trade, empowering worldwide users to technological innovation.
                 <div className='button-container'>
                     <Button>
-                    <Link to="/how">
+                    <Link to="/about">
                         <button className="button-30" role="button">
                         Learn More
                         </button>
