@@ -29,6 +29,7 @@ import QuotePhone from './pages/Pricing/QuotePhone';
 import PricePage from './pages/Pricing/PricePage';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
+import Landing from './pages/Landing';
 
 const Styles = styled.div`
   .navbar {
@@ -87,7 +88,7 @@ function App() {
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className = "p-2">
-                      <Nav.Link as = {Link} to ="/about" eventKey = '/about' className = "nav-link">
+                      <Nav.Link as = {Link} to ="/landing" eventKey = '/landing' className = "nav-link">
                         About Us
                       </Nav.Link>
                     </Nav>
@@ -157,6 +158,7 @@ function App() {
               <Route path = '/how' element = {<HowItWorksPage />} />
               <Route path = '/quote' element = {<QuotePhone/>} />
               <Route path = '/quoteprice' element = {<PricePage />} />
+              <Route path = '/landing' element = {<Landing />} />
             </Routes>
           </div>
         </main>
