@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
-import background from '../images/white-iphone.jpeg';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import IconButton from '@mui/material/IconButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -115,8 +114,8 @@ export default function Footer() {
                 <h3>Site Links</h3>
                 <hr style = {{color: 'white'}}>
                 </hr>
-                <a href = '#'>Privacy Policy</a><br />
-                <a href = '#'>Terms and Conditions</a>
+                <a href = '/'>Privacy Policy</a><br />
+                <a href = '/'>Terms and Conditions</a>
             </div>
         </div>
 

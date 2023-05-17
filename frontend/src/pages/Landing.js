@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import background from '../images/white-iphone.jpeg';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import IconButton from '@mui/material/IconButton';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import MailIcon from '@mui/icons-material/Mail';
-import logo from '../images/FetchTek-Logo.png';
 import { Link } from 'react-router-dom';
 
 const Styles = styled.div`
@@ -234,21 +228,6 @@ const Button = styled.div`
 
 export default function Landing() {
 
-    const [email, setEmail] = useState('');
-
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-    };
-
-    const handleSubmit = () => {
-        // Perform email submission logic here
-        console.log('Submitted email:', email);
-    };
-    const emailHandler = () => {
-        var mailToLink = "mailto:fetchtek@gmail.com";
-        window.open(mailToLink)
-    }
-
   return (
     <Styles>
         <div className='container-2'>
@@ -259,7 +238,7 @@ export default function Landing() {
                 <div className='button-container'>
                     <Button>
                     <Link to="/about">
-                        <button className="button-30" role="button">
+                        <button className="button-30">
                         Learn More
                         </button>
                     </Link>
