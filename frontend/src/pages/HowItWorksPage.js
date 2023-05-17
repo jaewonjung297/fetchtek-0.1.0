@@ -1,158 +1,87 @@
 import React from 'react'
+import ProgressBar from '../components/ProgressBar'
+import Btn from '../components/Btn'
 import styled from 'styled-components'
-import background from '../images/background.webp';
-import backgroundsm from '../images/background-sm.webp';
 
 const Styles = styled.div`
-    background: linear-gradient(#f8f8f8, #f3f3f3, #fdfdfd);
+.button_small {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5em;
+    }
+.buyback-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10em;
+    flex-wrap: wrap;
+}
+.process-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
-    .titleContainer {
-        padding-top: 17rem;
-        padding-bottom: 25rem;
-        text-align: center;
-    }
-    .title {
-        color: #0c0c0c;
-        font-size: 2.5rem;
-        line-height: 108%;
-        letter-spacing: -.02em;
-    }
-    .expContainer {
-        text-align: center;
-        padding-top: 17rem;
-        padding-bottom: 17rem;
-        font-size: 1.5rem;
-        align-items: center;
-        background: linear-gradient(-90deg, #016eff, #4092FF, #016eff);
-    }
-    .expText {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 55rem;
-        border-radius: 0.5rem;
-        color: white;
-        padding-top: 5rem;
-        padding-bottom: 15rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        font-size: 2.4rem;
-    }
-    .expText span {
-        color: cyan;
-        font-size:2.8rem;
-    }
-    .innerContainer {
-        display: flex;
-        text-align: center;
-        flex-wrap: wrap;
-    }
-    .innerContainer div {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .innerContainer h3 {
-        font-size: 2.4rem;
-        color: white;
-    }
-    .innerContainer p {
-        color: white;
-        max-width: 25rem;
-    }
-    .background-lg {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position:relative
-        object-fit: contain;
-        width: 120%;
-        height: auto;
-        border-radius: 1.2%
-        margin-bottom: 50px;
-    }
-    .background-sm {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position:relative
-        object-fit: contain;        
-        width: 120%;
-        height: auto
-        border-radius: 1.2%;
-    }
-    h1 span {
-        color: cyan;
-    }
-    .container-lg {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position:relative;
-    }
-    .container-sm {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        position:relative
-    }
-    @media screen and (max-width: 500px) {
-        .container-lg{
-           display:none;
-        }
-    
-        .container-sm{
-           display:flex;
-        }
-
-        .background-lg {
-            display: none;
-        }
-
-        .background-sm {
-            display: flex;
-        }
-    }
+}
+.process-container span {
+    color: #4092ff;
+}
+.item {
+    margin: 1rem 1rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
 `
+
 export default function HowItWorksPage() {
-  return (
+return (
     <Styles>
-        <div className = "container-lg">
-            <img src = {background} alt = "background" className = "background-lg"/>
-            <div style = {{position: "absolute", top: "35%", justifyContent: "center"}}>
-                <h1 style = {{color: "white", fontSize: "4.5vw", maxWidth:"950px", marginBottom: "2vw"}}>We Make<span> Fetching</span> Electronics Easier</h1>
-            </div>
+        <div style = {{display: "flex", justifyContent: "center"}}>
+            <h2 style = {{margin: "1em 0", fontSize: "3em"}}>How <span style = {{color: "#4092ff"}}>FetchTek</span> Works</h2>
         </div>
-        <div className = "container-sm">
-            <img src = {backgroundsm} alt = "background" className = "background-sm"/>
-            <h1 style = {{position: "absolute", top: "12%", color: "black", fontSize: "10vw", maxWidth: "75vw"}}>We Make <span>Fetching </span>Electronics Easier</h1>
-            <div style = {{position: "absolute", top: "76%", justifyContent: "center"}}>
-                
+
+        <ProgressBar />
+
+        <div className='button_small'>
+            <Btn link = "/" title = "Sell With Us" />
+        </div>
+
+        <div className = 'buyback-container'>
+            <h2 style = {{fontSize: "3em", padding: "1em"}}>Bulk Buyback <br />Program</h2>
+            <p style = {{maxWidth: "40em", padding: "1em"}}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.
+            <br /><br />
+            Fusce sit amet bibendum tortor, cursus pretium velit. Morbi porta tincidunt feugiat. In hac habitasse platea dictumst. Vivamus rhoncus erat metus. Donec malesuada sit amet ipsum tempor pulvinar. Morbi posuere maximus magna, eu lacinia odio fringilla a. Phasellus at nisl lorem. 
+            <br /><br />
+            Sed eget dui purus. Ut et urna quam. Quisque dictum tortor placerat arcu rhoncus, et eleifend erat interdum. Pellentesque vitae felis lorem.
+            </p>
+        </div>
+
+        <div className='process-container'>
+            <h2 style = {{fontSize: "2em", padding: "1em"}}>The Process</h2>
+        </div>
+        <div className='process-container'>
+            <div className='item'>
+                <h3><span>Step 1:</span> Contact Us</h3>
+                <hr/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.</p>
             </div>
-        </div> 
-        <div className = "expContainer">
-            <div className = "expText">
-                <p>FetchTek works to help <span>wholesalers</span> get the best bang for their buck!
-                With a wide range of connections, we 
-                        help <span>businesses</span> sell their electronics to trusted 
-                        partners for the <span>best</span> prices!
-                </p>
+            <div className='item'>
+                <h3><span>Step 2:</span> Ship Your Devices To Us</h3>
+                <hr/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.</p>
             </div>
-            <div className = "innerContainer">
-                <div>
-                    <h3>
-                        Sell Through Us
-                    </h3>
-                    <p>By being a seller on FetchTek, 
-                        we are taking the first step to simplifying your business's tasks. 
-                        Our job is only to find more electronics!</p>
-                </div>
-                <div>
-                    <h3>
-                    Get Connections
-                    </h3>
-                    <p>To become a trusted wholesaler in the industry, 
-                        it can take years to find credible buyers that reliably and consistently pay 
-                        for your work. Lucky for you, we've already built those connections!</p>
-                </div>
+            <div className='item'>
+                <h3><span>Step 3:</span> Get Quote</h3>
+                <hr/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.</p>
+            </div>
+            <div className='item'>
+                <h3><span>Step 4:</span> Receive A Cash Offer</h3>
+                <hr/>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est..</p>
             </div>
         </div>
     </Styles>

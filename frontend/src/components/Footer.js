@@ -5,7 +5,6 @@ import IconButton from '@mui/material/IconButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import MailIcon from '@mui/icons-material/Mail';
-import { Link } from 'react-router-dom';
 import logo from '../images/FetchTek Logo - TM (1).png';
 
 const Styles = styled.div`
@@ -83,7 +82,7 @@ export default function Footer() {
     <Styles>
         <div className = 'info-container'>
             <div>
-                <img src={logo} style = {{width: "10em", height: "auto"}}></img>
+                <img src={logo} alt = "logo" style = {{width: "10em", height: "auto"}}></img>
                 <p>
                 312 W Millbrook Road STE 121 Raleigh, NC 27609
                 <br/>
