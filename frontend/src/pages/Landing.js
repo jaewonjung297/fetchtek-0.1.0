@@ -1,16 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components'
 import background from '../images/white-iphone.jpeg';
 import { Link } from 'react-router-dom';
 
 const Styles = styled.div`
-    @media (max-width: 800px) {
-        .button_small {
-            display: flex;
-            justify-content: center;
-            margin-top: 2.5em;
-        }
-    }
     .container-box {
         display: flex;
         flex-wrap: wrap;
@@ -19,7 +12,6 @@ const Styles = styled.div`
     .box-element {
         margin-top: 100px
     }
-
     .box {
         margin: 20px;
         padding: 80px;
@@ -34,7 +26,6 @@ const Styles = styled.div`
         font-weight: bolder;
         color: #4092FF
     }
-
     .container-2 {
         margin-bottom: 6em;
         margin-top: 4em;
@@ -46,46 +37,26 @@ const Styles = styled.div`
         max-width: 35rem;
         margin: 2em;
     }
-
     .gradient-text {
         color: #4092FF
       }
-
     .reviews {
         padding: 50px;
     }
-
     .reviews h1 {
         max-width: 15em;
         font-size: 2em
     }
-
-    .contact {
-        margin-top: 10em;
-        padding: 50px;
-        background-color: #4092FF;
+    .info-container {
         display: flex;
+        margin-top: 2em;
+        justify-content: flex-start;
+        padding: 2em;
         flex-wrap: wrap;
-        justify-content: space-around;
     }
-
-    .contact h1 {
-        color: white;
-        font-size: 2.5em;
+    .info-box {
+        margin-left: 5em;
     }
-    .contact p {
-        color: white;
-    }
-
-    .contact span {
-        font-size: 2.5em;
-    }
-
-    .contact-box {
-        margin-bottom: 50px;
-    }
-
-
     .info-box a {
         text-decoration: none;
         color: black;
@@ -93,7 +64,6 @@ const Styles = styled.div`
     .info-box a:hover {
         color: #4092FF;
     }
-
     .button-container {
         padding-top: 2.2em;
         display: flex;
@@ -104,6 +74,7 @@ const Styles = styled.div`
 
 const Bubble = styled.div`
 .container {
+    max-width: 550px;
     margin: 0 auto;
   }
   
@@ -130,7 +101,7 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-
+    left: 20px;
     border-width: 30px 0 0 30px;
     border-style: solid;
     border-color: #f2f2f2 transparent;	
@@ -149,7 +120,7 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-
+    left: 400px;
     border-width: 30px 30px 0 0;
     border-style: solid;
     border-color: #f2f2f2 transparent;
@@ -168,7 +139,7 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-
+    left: 20px;
     border-width: 30px 0 0 30px;
     border-style: solid;
     border-color: #f2f2f2 transparent;	
@@ -182,7 +153,6 @@ const Bubble = styled.div`
     float: right;
   }
 `
-
 const Button = styled.div`
 .button-30 {
   align-items: center;
@@ -214,20 +184,15 @@ const Button = styled.div`
   font-size: 18px;
   color: white;
 }
-
-
 .button-30:hover {
   box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
   transform: translateY(-2px);
 }
-
 .button-30:active {
   box-shadow: #D6D6E7 0 3px 7px inset;
   transform: translateY(2px);
 }`
-
 export default function Landing() {
-
   return (
     <Styles>
         <div className='container-2'>
@@ -238,7 +203,7 @@ export default function Landing() {
                 <div className='button-container'>
                     <Button>
                     <Link to="/about">
-                        <button className="button-30">
+                        <button className="button-30" role="button">
                         Learn More
                         </button>
                     </Link>
@@ -246,8 +211,10 @@ export default function Landing() {
                 </div>
             </div>
         </div>
-        
+
         <div className='container-box'>
+            <div className='box-element'>
+            </div>
             <div className='box-element'>
                 <div className='box'>
                     <h1>We Buy iPhones!</h1>
@@ -299,7 +266,6 @@ export default function Landing() {
                 </Bubble>
             </div>
         </div>
-
     </Styles>
   )
 }
