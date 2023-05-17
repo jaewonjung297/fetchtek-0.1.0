@@ -10,7 +10,7 @@ import logo from '../images/FetchTek Logo - TM (1).png';
 
 const Styles = styled.div`
 margin-top: 15em;
-background-color: gray;
+background-color: #4092ff;
 color: white;
 .news-container {
     margin-top: 2em;
@@ -44,7 +44,7 @@ color: white;
       align-items: flex-start;
     }
     .info-box {
-        margin: 2px;
+        margin: 10px
     }
     .news-container {
         flex-direction: column;
@@ -82,16 +82,15 @@ export default function Footer() {
   return (
     <Styles>
         <div className = 'info-container'>
-            <div className = 'info-box'>
-                <h1 style = {{fontSize: "2em"}}><a href = "/">FetchTek LLC</a></h1>
-                <img src={logo} size="1em"></img>
+            <div>
+                <img src={logo} style = {{width: "10em", height: "auto"}}></img>
                 <p>
                 312 W Millbrook Road STE 121 Raleigh, NC 27609
                 <br/>
                 (919) 348-9881
                 </p>
             </div>
-            <div className = 'info-box'>
+            <div className = 'info-box' style = {{marginTop: "2em"}}>
                 <h3>Contact Us!</h3>
                 <hr style = {{color: 'white'}}>
                 </hr>
@@ -110,7 +109,7 @@ export default function Footer() {
                     </IconButton>
                 </div>
             </div>
-            <div className = 'info-box'>
+            <div className = 'info-box' style = {{marginTop: "2em"}}>
                 <h3>Site Links</h3>
                 <hr style = {{color: 'white'}}>
                 </hr>
