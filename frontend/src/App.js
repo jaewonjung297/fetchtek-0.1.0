@@ -30,6 +30,8 @@ import PricePage from './pages/Pricing/PricePage';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
 import Landing from './pages/Landing';
+import Grding from './pages/Grading'
+import Footer from './components/Footer';
 
 const Styles = styled.div`
   .navbar {
@@ -88,8 +90,8 @@ function App() {
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className = "p-2">
-                      <Nav.Link as = {Link} to ="/about" eventKey = '/about' className = "nav-link">
-                        About Us
+                      <Nav.Link as = {Link} to ="/grading" eventKey = '/grding' className = "nav-link">
+                        Grading Process
                       </Nav.Link>
                     </Nav>
 
@@ -158,11 +160,12 @@ function App() {
               <Route path = '/quote' element = {<QuotePhone/>} />
               <Route path = '/quoteprice' element = {<PricePage />} />
               <Route path = '/' element = {<Landing />} />
+              <Route path = '/grading' element = {<Grding />} />
             </Routes>
           </div>
         </main>
         <footer>
-          <div className="text-center" style = {{marginTop: "5em"}}>All rights reserved</div>
+          <Footer />
         </footer>
       </div>
     </BrowserRouter>

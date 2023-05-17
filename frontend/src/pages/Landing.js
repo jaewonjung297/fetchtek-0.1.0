@@ -10,6 +10,13 @@ import logo from '../images/FetchTek-Logo.png';
 import { Link } from 'react-router-dom';
 
 const Styles = styled.div`
+    @media (max-width: 800px) {
+        .button_small {
+            display: flex;
+            justify-content: center;
+            margin-top: 2.5em;
+        }
+    }
     .container-box {
         display: flex;
         flex-wrap: wrap;
@@ -83,16 +90,7 @@ const Styles = styled.div`
     .contact-box {
         margin-bottom: 50px;
     }
-    .info-container {
-        display: flex;
-        margin-top: 2em;
-        justify-content: flex-start;
-        padding: 2em;
-        flex-wrap: wrap;
-    }
-    .info-box {
-        margin-left: 5em;
-    }
+
 
     .info-box a {
         text-decoration: none;
@@ -112,7 +110,6 @@ const Styles = styled.div`
 
 const Bubble = styled.div`
 .container {
-    max-width: 550px;
     margin: 0 auto;
   }
   
@@ -139,7 +136,7 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-    left: 20px;
+
     border-width: 30px 0 0 30px;
     border-style: solid;
     border-color: #f2f2f2 transparent;	
@@ -158,7 +155,7 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-    left: 400px;
+
     border-width: 30px 30px 0 0;
     border-style: solid;
     border-color: #f2f2f2 transparent;
@@ -177,7 +174,7 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-    left: 20px;
+
     border-width: 30px 0 0 30px;
     border-style: solid;
     border-color: #f2f2f2 transparent;	
@@ -270,9 +267,8 @@ export default function Landing() {
                 </div>
             </div>
         </div>
+        
         <div className='container-box'>
-            <div className='box-element'>
-            </div>
             <div className='box-element'>
                 <div className='box'>
                     <h1>We Buy iPhones!</h1>
@@ -325,68 +321,6 @@ export default function Landing() {
             </div>
         </div>
 
-        <div className='contact'>
-            <div className = 'contact-box'>
-                <h1>Contact Us!</h1>
-                <hr style = {{color: 'white'}}>
-                </hr>
-                <div>
-                    <IconButton size="large" href = 'https://wa.me/19199013885'>
-                        <WhatsAppIcon style = {{fontSize: "1em", color: "white"}}/>
-                    </IconButton>
-                    <IconButton size="large" href = 'https://www.instagram.com/fetchtek_/?igshid=NTc4MTIwNjQ2YQ%3D%3D'>
-                        <InstagramIcon style = {{fontSize: "1em", color: "white"}}/>
-                    </IconButton>
-                    <IconButton size="large" href = 'https://www.facebook.com/profile.php?id=100078414422907&mibextid=LQQJ4d'>
-                        <FacebookIcon style = {{fontSize: "1em", color: "white"}}/>
-                    </IconButton>
-                    <IconButton size="large" onClick={emailHandler}>
-                        <MailIcon style = {{fontSize: "1em", color: "white"}}/>
-                    </IconButton>
-                </div>
-            </div>
-            <div>
-                <h1>Sign Up for Our Newsletter</h1>
-                <hr style = {{color: 'white'}}>
-                </hr>
-                <label style={{color: "white", padding: "15px"}} htmlFor="emailInput">Enter Your Email:</label>
-                <input
-                    type="email"
-                    id="emailInput"
-                    value={email}
-                    style={{ width: '300px', height: '40px', fontSize: '16px' }}
-                    onChange={handleEmailChange}
-                />
-                <button onClick={handleSubmit}
-                    style={{
-                    backgroundColor: 'white',
-                    color: '#4092FF',
-                    marginLeft: '5px',
-                    padding: '7px 15px',
-                    fontSize: '18px',
-                    borderRadius: '5px',
-                    border: 'none',
-                    cursor: 'pointer',
-                    }}
-                    >Submit</button>
-            </div>
-        </div>
-
-        <div className = 'info-container'>
-            <div className = 'info-box'>
-                <img src = {logo} width = "100px" position = "auto" alt = "FetchTek Logo" style = {{width: "10em", height: "auto"}}/>
-                <p>
-                312 W Millbrook Road STE 121 Raleigh, NC 27609
-                <br/>
-                (919) 348-9881
-                </p>
-            </div>
-            <div className = 'info-box'>
-                <h3 style = {{marginBottom: "0.5em", marginTop: "1em"}}>Site Links</h3>
-                <a href = '#'>Privacy Policy</a><br />
-                <a href = '#'>Terms and Conditions</a>
-            </div>
-        </div>
     </Styles>
   )
 }
