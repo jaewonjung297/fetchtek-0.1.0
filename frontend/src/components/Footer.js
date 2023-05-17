@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
-import background from '../images/white-iphone.jpeg';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import IconButton from '@mui/material/IconButton';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import MailIcon from '@mui/icons-material/Mail';
-import { Link } from 'react-router-dom';
 
 const Styles = styled.div`
 margin-top: 15em;
@@ -113,8 +111,8 @@ export default function Footer() {
                 <h3>Site Links</h3>
                 <hr style = {{color: 'white'}}>
                 </hr>
-                <a href = '#'>Privacy Policy</a><br />
-                <a href = '#'>Terms and Conditions</a>
+                <a href = '/'>Privacy Policy</a><br />
+                <a href = '/'>Terms and Conditions</a>
             </div>
         </div>
 

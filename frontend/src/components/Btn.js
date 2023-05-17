@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Button = styled.div`
+const Styles = styled.div`
 .button-30 {
   align-items: center;
   appearance: none;
@@ -46,13 +46,13 @@ const Button = styled.div`
 
 function Btn(props) {
     return (
-        <Button>
-            <Link to={props.link}>
-                <button className="button-30" role="button">
-                {props.title}
-                </button>
-            </Link>
-        </Button>
+        <Styles>
+          <Link to={props.link}>
+            <button className="button-30">
+              {props.title}
+            </button>
+          </Link>
+        </Styles>
     )
 }
 

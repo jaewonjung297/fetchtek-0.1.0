@@ -1,6 +1,5 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { useContext } from 'react';
-import HomeScreen from './pages/HomeScreen';
 import ProductScreen from './pages/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
