@@ -7,10 +7,11 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom';
+import logo from '../images/FetchTek Logo - TM (1).png';
 
 const Styles = styled.div`
 margin-top: 15em;
-background-color: #4092FF;
+background-color: gray;
 color: white;
 .news-container {
     margin-top: 2em;
@@ -84,6 +85,7 @@ export default function Footer() {
         <div className = 'info-container'>
             <div className = 'info-box'>
                 <h1 style = {{fontSize: "2em"}}><a href = "/">FetchTek LLC</a></h1>
+                <img src={logo} size="1em"></img>
                 <p>
                 312 W Millbrook Road STE 121 Raleigh, NC 27609
                 <br/>
