@@ -81,10 +81,10 @@ export default function Grading() {
                 <p className = 'grade-grade'>New: Sealed</p>
                 <p className = 'grade-text'>
                 <ul> 
-                <li>100% brand new phone sealed in the manufacturer's original packaging</li>
-                <li>Device has never been activated or used</li>
-                <li>Original accessories have never been used or tampered with</li>
-                <li>Seal hasn't been tampered with and the box is in perfect condition</li>
+                    <li>100% brand new phone sealed in the manufacturer's original packaging</li>
+                    <li>Device has never been activated or used</li>
+                    <li>Original accessories have never been used or tampered with</li>
+                    <li>Seal hasn't been tampered with and the box is in perfect condition</li>
                 </ul>
                 </p>
             </div>
@@ -93,10 +93,10 @@ export default function Grading() {
                 <p className = 'grade-grade'>New: Open box</p>
                 <p className = 'grade-text'>
                 <ul> 
-                <li>These devices must have been activated for less than 60 days</li>
-                <li>Absolutely no scratches or blemishes on any part of the phone</li>
-                <li>All accessories have never been used in the original packaging</li>
-                <li>Device must have its original plastic on the screen</li>
+                    <li>These devices must have been activated for less than 60 days</li>
+                    <li>Absolutely no scratches or blemishes on any part of the phone</li>
+                    <li>All accessories have never been used in the original packaging</li>
+                    <li>Device must have its original plastic on the screen</li>
                 </ul>
                 </p>
             </div>
@@ -104,9 +104,9 @@ export default function Grading() {
                 <p className = 'grade-grade'>A</p>
                 <p className = 'grade-text'>
                 <ul> 
-                <li>Absolutely no scratches on front and back glass</li>
-                <li>Device must pass all functionality tests</li>
-                <li>Maximum of 1 small light scratch (under 1 cm) on housing that can only be uncovered by heavy inspection under a light</li>
+                    <li>Absolutely no scratches on front and back glass</li>
+                    <li>Device must pass all functionality tests</li>
+                    <li>Maximum of 1 small light scratch (under 1 cm) on housing that can only be uncovered by inspection under a light</li>
                 </ul>
                 </p>
             </div>
@@ -114,38 +114,44 @@ export default function Grading() {
                 <p className = 'grade-grade'>B1</p>
                 <p className = 'grade-text'>
                 <ul> 
-                <li>Absolutely no scratches on front glass</li>
-                <li>1-3 light scratches on the back glass are permissable </li>
-                <li>Device must pass all functionality tests</li>
-                <li>Maximum of 1 small light scratch on housing that can only be uncovered by heavy inspection under a light</li>
+                    <li>Absolutely no scratches on front glass</li>
+                    <li>A couple light scratches on the back glass are acceptable (all under 1 cm)</li>
+                    <li>May have light scratches or scuffs on housing</li>
+                    <li>Device must pass all functionality tests</li>
                 </ul>
                 </p>
             </div>
             <div className = 'grade'>
                 <p className = 'grade-grade'>B2</p>
-                <p className = 'grade-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Praesent sagittis risus nisl, vel viverra purus facilisis in. 
-                    Quisque aliquam, est mattis placerat finibus, sem eros luctus nunc, 
-                    vitae efficitur nulla arcu quis ante. Etiam placerat congue augue non 
-                    feugiat. Cras sed dolor a eros scelerisque posuere.
+                <p className = 'grade-text'>
+                <ul> 
+                    <li>light scratches on screen uncovered by light and inspection</li>
+                    <li>May have light scratches on back glass</li>
+                    <li>May have scratches or scuffs on housing</li>
+                    <li>Device must pass all functionality tests</li>
+                </ul>
                 </p>
             </div>
             <div className = 'grade'>
                 <p className = 'grade-grade'>C</p>
-                <p className = 'grade-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Praesent sagittis risus nisl, vel viverra purus facilisis in. 
-                    Quisque aliquam, est mattis placerat finibus, sem eros luctus nunc, 
-                    vitae efficitur nulla arcu quis ante. Etiam placerat congue augue non 
-                    feugiat. Cras sed dolor a eros scelerisque posuere.
+                <p className = 'grade-text'>
+                <ul>
+                    <li>Visible scratches that can be felt easily with a fingernail</li>
+                    <li>Device may have discoloration around the Apple logo.</li>
+                    <li>Device may have a crack on the front or back screen(can't be both)</li>
+                    <li>Device may have visible wear on the corners and edges</li>
+                    <li>May have scuff marks around the charging port</li>
+                </ul>
                 </p>
             </div>
             <div className = 'grade'>
                 <p className = 'grade-grade'>D</p>
-                <p className = 'grade-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Praesent sagittis risus nisl, vel viverra purus facilisis in. 
-                    Quisque aliquam, est mattis placerat finibus, sem eros luctus nunc, 
-                    vitae efficitur nulla arcu quis ante. Etiam placerat congue augue non 
-                    feugiat. Cras sed dolor a eros scelerisque posuere.
+                <p className = 'grade-text'>
+                <ul>
+                    <li>Device has visible scratches that can be felt easily with a fingernail</li>
+                    <li>Device has a crack on the front AND back screen</li>
+                    <li>Device has visible wear and tear on housing</li>
+                </ul>
                 </p>
             </div>
     </Styles>
