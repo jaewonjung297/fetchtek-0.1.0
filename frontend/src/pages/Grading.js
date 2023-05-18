@@ -74,7 +74,7 @@ export default function Grading() {
                     the value of your electronics.
                 </p>
                 <div className='button_small'>
-                    <Btn link = "/" title = "Sell With Us" />
+                    <Btn link = "/sellersignup" title = "Sell With Us" />
                 </div>
             </div>
             

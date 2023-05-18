@@ -35,6 +35,7 @@ import ContactUs from './pages/ContactUs';
 import FAQ from './pages/FAQ';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import SellerSignUp from './pages/SellerSignUp';
 
 const Styles = styled.div`
   .navbar {
@@ -100,14 +101,20 @@ function App() {
                 <Navbar.Collapse id="responsive-navbar-nav">
 
                     <Nav className = "p-2">
+                      <Nav.Link as = {Link}  to ="/how" eventKey = '/how' className = "nav-link">
+                        How It Works
+                      </Nav.Link>
+                    </Nav>
+
+                    <Nav className = "p-2">
                       <Nav.Link as = {Link} to ="/grading" eventKey = '/grding' className = "nav-link">
                         Grading Process
                       </Nav.Link>
                     </Nav>
 
                     <Nav className = "p-2">
-                      <Nav.Link as = {Link}  to ="/how" eventKey = '/how' className = "nav-link">
-                        How It Works
+                      <Nav.Link as = {Link}  to ="/sellersignup" eventKey = '/sellersignup' className = "nav-link">
+                        Seller Sign Up
                       </Nav.Link>
                     </Nav>
                     <Nav className = "p-2">
@@ -115,7 +122,7 @@ function App() {
                           <LinkContainer to = "/FAQ">
                             <NavDropDown.Item>FAQ</NavDropDown.Item>
                           </LinkContainer>
-                          <LinkContainer to = "/ContactUs">
+                          <LinkContainer to = "/contactus">
                             <NavDropDown.Item>Contact Us</NavDropDown.Item>
                           </LinkContainer>
                       </NavDropDown>
@@ -149,6 +156,7 @@ function App() {
               <Route path = '/faq' element = {<FAQ />} />
               <Route path = '/privacy' element = {<PrivacyPolicy />} />
               <Route path = '/terms' element = {<TermsConditions />} />
+              <Route path = '/sellersignup' element ={<SellerSignUp />} />
             </Routes>
           </div>
         </main>

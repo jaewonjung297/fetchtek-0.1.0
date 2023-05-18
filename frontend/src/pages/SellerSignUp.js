@@ -33,7 +33,9 @@ const TitleBoxContainer = styled.div`
   }
 }
 `;
+const SellingDescription = styled.section`
 
+`
 const FormContainer = styled.div`
 max-width: 800px;
 width: 100%;
@@ -53,6 +55,7 @@ const TitleBox = styled.h1`
   font-size: 50px;
   transform: translate(-50%, -50%);
   color: white;
+  
   @media (max-width: 800px) {
     font-size: 22px;
   }
@@ -102,7 +105,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const SellSU = () => {
+const SellerSignUp = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -136,6 +139,9 @@ const SellSU = () => {
       </TitleBoxContainer>
       <TitleBoxContainer></TitleBoxContainer>
     </ContactUsContainer>
+    <SellingDescription>
+
+    </SellingDescription>
     <FormContainer>
       <h2 style={{justify: 'center'}}>Send Us a Message!</h2>
       <Form onSubmit={handleSubmit}>
@@ -190,4 +196,4 @@ const SellSU = () => {
   );
 };
 
-export default SellSU;
+export default SellerSignUp;

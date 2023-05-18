@@ -83,7 +83,7 @@ return (
         <ProgressBar />
 
         <div className='button_small'>
-            <Btn link = "/" title = "Sell With Us" />
+            <Btn link = "/sellersignup" title = "Sell With Us" />
         </div>
 
         <div className = 'buyback-container'>
