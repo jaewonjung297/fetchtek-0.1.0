@@ -37,7 +37,9 @@ const TitleBoxContainer = styled.div`
 }
 `;
 const SellingDescription = styled.section`
-
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
 `
 const FormContainer = styled.div`
 max-width: 800px;
@@ -58,7 +60,7 @@ const TitleBox = styled.h1`
   font-size: 50px;
   transform: translate(-50%, -50%);
   color: white;
-  
+
   @media (max-width: 800px) {
     font-size: 22px;
   }
