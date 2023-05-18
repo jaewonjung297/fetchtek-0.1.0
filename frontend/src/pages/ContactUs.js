@@ -66,12 +66,6 @@ const FormGroup = styled.div`
   padding: 10px;
 `;
 
-const Label = styled.label`
-  font-weight: bold;
-  margin-bottom: 5px;
-  padding: 10px;
-`;
-
 const Input = styled.input`
   padding: 10px;
   font-size: 16px;
@@ -107,13 +101,11 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform form submission logic here, such as sending an email or making an API request
     console.log('Name:', name);
     console.log('Email:', email);
     console.log('Phone:', phone);
     console.log('Subject:', subject);
     console.log('Message:', message);
-    // Clear the form fields
     setName('');
     setEmail('');
     setPhone('');
@@ -125,7 +117,7 @@ const ContactUs = () => {
     <div>
     <ContactUsContainer>
       <TitleBoxContainer>
-       <img className="image" src={image}></img>
+       <img className="image" alt = "phone background" src={image}></img>
         <TitleBox>
           Contact Us
         </TitleBox>

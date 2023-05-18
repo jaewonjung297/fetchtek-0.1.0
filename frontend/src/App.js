@@ -32,6 +32,7 @@ import Landing from './pages/Landing';
 import Grding from './pages/Grading'
 import Footer from './components/Footer';
 import ContactUs from './pages/ContactUs';
+import FAQ from './pages/FAQ';
 
 const Styles = styled.div`
   .navbar {
@@ -102,8 +103,8 @@ function App() {
                     </Nav>
 
                     <Nav className = "p-2">
-                      <Nav.Link as = {Link}  to ="/quote" eventKey = '/quote' className = "nav-link">
-                        Get a Quote
+                      <Nav.Link as = {Link}  to ="/faq" eventKey = '/faq' className = "nav-link">
+                        FAQ
                       </Nav.Link>
                     </Nav>
 
@@ -168,6 +169,7 @@ function App() {
               <Route path = '/' element = {<Landing />} />
               <Route path = '/grading' element = {<Grding />} />
               <Route path = '/contactus' element = {<ContactUs />} />
+              <Route path = '/faq' element = {<FAQ />} />
             </Routes>
           </div>
         </main>
