@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import styled from 'styled-components';
 import image from '../images/Shaking Hands.jpg';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 const ContactUsContainer = styled.div`
   max-width: 100%;
@@ -73,12 +76,6 @@ const FormGroup = styled.div`
   padding: 10px;
 `;
 
-const Label = styled.label`
-  font-weight: bold;
-  margin-bottom: 5px;
-  padding: 10px;
-`;
-
 const Input = styled.input`
   padding: 10px;
   font-size: 16px;
@@ -86,53 +83,88 @@ const Input = styled.input`
   border-radius: 4px;
 `;
 
-const TextArea = styled.textarea`
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-`;
 
-const Button = styled.button`
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4285f4;
-  margin: auto;
-  max-width: 100px;
-  color: #fff;
-  border: none;
+const ButtonStyle = styled.div`
+display: flex;
+justify-content: center; 
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #4092FF;
   border-radius: 4px;
+  border-width: 0;
+  box-shadow: 0 1px 2px, 0 7px 13px -3px, 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
   cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  color: white;
+}
+
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
 `;
 
 const SellerSignUp = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can perform form submission logic here, such as sending an email or making an API request
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Phone:', phone);
-    console.log('Subject:', subject);
-    console.log('Message:', message);
     // Clear the form fields
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match!');
+      return;
+    } else if (checked === false) {
+      toast.error('Please Agree to Terms and Conditions!');
+    } else {
+      toast.success("Sign Up Successful!")
+    }
     setName('');
     setEmail('');
     setPhone('');
-    setSubject('');
-    setMessage('');
+    setPassword('');
+    setConfirmPassword('');
   };
 
   return (
     <div>
-    <ContactUsContainer>
+    <ContactUsContainer id = "top">
       <TitleBoxContainer>
-       <img className="image" src={image}></img>
+       <img className="image" src={image} alt = "background title"></img>
         <TitleBox>
           Become a Partner!
         </TitleBox>
@@ -143,7 +175,7 @@ const SellerSignUp = () => {
 
     </SellingDescription>
     <FormContainer>
-      <h2 style={{justify: 'center'}}>Send Us a Message!</h2>
+      <h2 style={{justify: 'center'}}>Sign Up Today!</h2>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Input
@@ -165,31 +197,32 @@ const SellerSignUp = () => {
         </FormGroup>
         <FormGroup>
           <Input
-            type="text"
-            value={phone}
-            placeholder='Phone'
-            onChange={(e) => setPhone(e.target.value)}
-            required
+          placeholder = "Phone Number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          required
           />
         </FormGroup>
         <FormGroup>
           <Input
-            type="text"
-            value={subject}
-            placeholder='Subject'
-            onChange={(e) => setPhone(e.target.value)}
-            required
+          placeholder = "Password"
+          value = {password}
+          onChange = {(e) => setPassword(e.target.value)}
+          required
           />
         </FormGroup>
         <FormGroup>
-          <TextArea
-            value={message}
-            placeholder='Message'
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          ></TextArea>
+          <Input
+          placeholder = "Confirm Password"
+          value = {confirmPassword}
+          onChange = {(e) => setConfirmPassword(e.target.value)}
+          required
+          />
         </FormGroup>
-        <Button type="submit">Submit</Button>
+        <FormControlLabel required control={<Checkbox onChange = {e => {console.log(e.target.checked); setChecked(e.target.checked);}}/>} label={<p style = {{marginTop: "1em"}}>I agree to the FetchTek <a href = '/terms' style = {{textDecoration: "none"}}>Terms and Conditions</a></p>}/>
+        <ButtonStyle>
+          <button className = 'button-30' type="submit">Submit</button>
+        </ButtonStyle>
       </Form>
       </FormContainer>
       </div>

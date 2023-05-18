@@ -83,15 +83,15 @@ return (
         <ProgressBar />
 
         <div className='button_small'>
-            <Btn link = "/sellersignup" title = "Sell With Us" />
+            <Btn link = "/sellersignup#top" title = "Sell With Us"/>
         </div>
 
         <div className = 'buyback-container'>
             <div>
                 <h2 style = {{fontSize: "3em", padding: "1em"}}>Bulk <span style = {{color: "cyan"}}>Buyback</span> <br />Program</h2>
-                <div class="container">
+                <div className="container">
                     <a data-scroll href="#full">
-                        <div class="arrow"></div>
+                        <div className="arrow"></div>
                     </a>
                 </div>
             </div>

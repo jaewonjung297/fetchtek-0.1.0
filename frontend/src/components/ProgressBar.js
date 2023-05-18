@@ -65,7 +65,6 @@ body::-webkit-scrollbar {
         display: none;
     }
     .size {
-        transform: none;
         background-color: white;
         color: black;
       }
@@ -94,7 +93,7 @@ export default function ProgressBar() {
     return (
         <Styles>
             <div className = "scroll-container">
-                <div class="progress-container">
+                <div className="progress-container">
                 <div id="progressbar" className={`progress-bar ${progressHeight > completion ? 'blue' : ''}`} style={{ height: `${progressHeight}%` }}></div>
                 </div>
                 <div className = 'item-container'>

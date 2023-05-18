@@ -1,12 +1,12 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import { useContext } from 'react';
+//import { useContext } from 'react';
 import ProductScreen from './pages/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Badge from 'react-bootstrap/Badge';
+//import Badge from 'react-bootstrap/Badge';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Store } from './Store';
+//import { Store } from './Store';
 import CartPage from './pages/CartPage';
 import AboutPage from './pages/AboutPage';
 import SignInPage from './pages/SignInPage';
@@ -26,8 +26,8 @@ import ProfileViewPage from './pages/ProfileViewPage';
 import HowItWorksPage from './pages/HowItWorksPage';
 import QuotePhone from './pages/Pricing/QuotePhone';
 import PricePage from './pages/Pricing/PricePage';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PersonIcon from '@mui/icons-material/Person';
+//import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+//import PersonIcon from '@mui/icons-material/Person';
 import Landing from './pages/Landing';
 import Grding from './pages/Grading'
 import Footer from './components/Footer';
@@ -74,7 +74,7 @@ const Styles = styled.div`
 `;
 
 function App() {
-  const {state, dispatch: ctxDispatch} = useContext(Store);
+  /*const {state, dispatch: ctxDispatch} = useContext(Store);
   const {cart, userInfo} = state;
 
   const signOutHandler = () => {
@@ -82,7 +82,7 @@ function App() {
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress')
     window.location.href = '/signin';
-  };
+  };*/
   return (
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
