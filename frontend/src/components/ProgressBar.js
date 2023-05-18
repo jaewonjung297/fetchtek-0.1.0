@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import useReadingProgress from './hooks/useReadingProgress'
 import styled from 'styled-components';
 
@@ -6,7 +6,6 @@ const Styles = styled.div`
 body::-webkit-scrollbar {
 	display: none; /* for Chrome, Safari, and Opera */
 }
-
 
 .progress-container {
     left: 10%;
@@ -43,7 +42,7 @@ body::-webkit-scrollbar {
     color: #4092ff
 }
 .size {
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
     background-color: #4092ff;
     color: white;
 }
@@ -75,25 +74,37 @@ body::-webkit-scrollbar {
 
 export default function ProgressBar() {
     const completion = useReadingProgress();
-    const progressBar = document.getElementById("progressbar");
-    window.onscroll = () => {
-        console.log(completion)
-        progressBar.style.height = Math.min(completion, 73.5) + "rem";
-    }
+    const [progressHeight, setProgressHeight] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const windowHeight = window.innerHeight;
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const scrollHeight = document.documentElement.scrollHeight - windowHeight;
+          const progress = (scrollTop / scrollHeight) * 300;
+    
+          setProgressHeight(Math.min(progress, 100));
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
     return (
         <Styles>
             <div className = "scroll-container">
                 <div class="progress-container">
-                    <div id="progressbar" className="progress-bar"></div>
+                <div id="progressbar" className={`progress-bar ${progressHeight > completion ? 'blue' : ''}`} style={{ height: `${progressHeight}%` }}></div>
                 </div>
                 <div className = 'item-container'>
-                    <div className = {completion > 1 && completion < 10 ? 'scroll-item size' : 'scroll-item'}>
+                    <div className = {progressHeight > 1 && progressHeight < 12 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         Create Your <span>Seller</span> Account
                         </h3>
                         <p>Opening a seller account with FetchTek is just one click away!</p>
                     </div>
-                    <div className = {completion > 14 && completion < 26 ? 'scroll-item size' : 'scroll-item'}>
+                    <div className = {progressHeight > 16 && progressHeight < 36 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         Review Our <span>Grading Process</span>
                         </h3>
@@ -101,19 +112,19 @@ export default function ProgressBar() {
                         Each unit is cosmetically graded per our grading guidelines to ensure quality consistency
                         </p>
                     </div>
-                    <div className = {completion > 30 && completion < 41 ? 'scroll-item size' : 'scroll-item'}>
+                    <div className = {progressHeight > 41 && progressHeight < 56 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         Start an <span>Order Request</span>
                         </h3>
                         <p>Easily create an order request using our platform.</p>
                     </div>
-                    <div className = {completion > 45 && completion < 55 ? 'scroll-item size' : 'scroll-item'}>
+                    <div className = {progressHeight > 61 && progressHeight < 74 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
-                        Fill Out the <span>Order Specifications</span>
+                        Fill Out the <span>Order Details</span>
                         </h3>
                         <p>Complete the details of the order.</p>
                     </div>
-                    <div className = {completion > 58 && completion < 69 ? 'scroll-item size' : 'scroll-item'}>
+                    <div className = {progressHeight > 80 && progressHeight < 94 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         <span>Ship</span> Your Supply
                         </h3>

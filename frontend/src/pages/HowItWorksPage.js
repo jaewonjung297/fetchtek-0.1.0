@@ -56,13 +56,28 @@ scroll-behavior: smooth;
     align-items: center;
     justify-content: center;
   }
+  .title {
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 2em;
+    }
+  }
+  .fetchtek {
+    color: "#4092FF";
+    text-decoration: none;
+}
+.fetchtek:hover {
+    color: cyan;
+}
 `
 
 export default function HowItWorksPage() {
 return (
     <Styles>
         <div style = {{display: "flex", justifyContent: "center"}}>
-            <h2 style = {{margin: "1em 0", fontSize: "3em"}}>How <span style = {{color: "#4092ff"}}>FetchTek</span> Works</h2>
+            <h2 className = "title" style = {{margin: "0em auto", fontSize: "3em"}}>How <a href = '/' className = "fetchtek">FetchTek</a> Works</h2>
         </div>
 
         <ProgressBar />
@@ -73,7 +88,7 @@ return (
 
         <div className = 'buyback-container'>
             <div>
-                <h2 style = {{fontSize: "3em", padding: "1em"}}>Bulk Buyback <br />Program</h2>
+                <h2 style = {{fontSize: "3em", padding: "1em"}}>Bulk <span style = {{color: "cyan"}}>Buyback</span> <br />Program</h2>
                 <div class="container">
                     <a data-scroll href="#full">
                         <div class="arrow"></div>
