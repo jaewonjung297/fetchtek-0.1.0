@@ -152,6 +152,7 @@ const SellerSignUp = () => {
       return;
     } else if (checked === false) {
       toast.error('Please Agree to Terms and Conditions!');
+      return;
     } else {
       toast.success("Sign Up Successful!")
     }
