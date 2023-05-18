@@ -112,8 +112,8 @@ export default function Footer() {
                 <h3>Site Links</h3>
                 <hr style = {{color: 'white'}}>
                 </hr>
-                <a href = '/'>Privacy Policy</a><br />
-                <a href = '/'>Terms and Conditions</a>
+                <a href = '/privacy'>Privacy Policy</a><br />
+                <a href = '/terms'>Terms and Conditions</a>
             </div>
         </div>
 

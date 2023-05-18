@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import Btn from '../components/Btn'
+import image from '../images/FAQ.png'
 
 const Styles = styled.div`
 .title-container {
     display: flex;
     justify-content: center;
     margin-top: 2em;
+    flex-wrap: wrap;
 }
 .title-container span {
     color: #4092ff;
@@ -14,7 +16,7 @@ const Styles = styled.div`
 
 .question-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -106,7 +108,7 @@ export default function FAQ() {
     return (
         <Styles>
             <div className='title-container'>
-                <h2>Frequently Asked <span>Questions</span></h2>
+                <img src = {image} alt = "FAQ Graphic" style = {{width: "20em"}}/>
             </div>
             <div className = 'question-container'>
                 <Collapsible question = "Q: Are the prices negotiable?" answer = "Yes once you completed your submission, the sales team can negotiate the final price and send you an invoice." />

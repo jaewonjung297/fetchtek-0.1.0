@@ -101,7 +101,6 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-    left: 20px;
     border-width: 30px 0 0 30px;
     border-style: solid;
     border-color: #f2f2f2 transparent;	
@@ -120,7 +119,6 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-    left: 400px;
     border-width: 30px 30px 0 0;
     border-style: solid;
     border-color: #f2f2f2 transparent;
@@ -139,7 +137,6 @@ const Bubble = styled.div`
     margin-top: -40px;
     padding-top: 0px;
     bottom: -30px;
-    left: 20px;
     border-width: 30px 0 0 30px;
     border-style: solid;
     border-color: #f2f2f2 transparent;	
@@ -196,7 +193,7 @@ export default function Landing() {
   return (
     <Styles>
         <div className='container-2'>
-        <img src={background} alt="background" className="background-lg" style={{ width: '25em', height: 'auto', borderRadius: '3px'}} />
+        <img src={background} alt="background" className="background-lg" style={{ width: '23em', height: 'auto', borderRadius: '3px'}} />
             <div className='element-2'>
                 <h1><span className="gradient-text">FetchTek</span>: A Tech Marketplace</h1>
                 FetchTek was created and developed for the purpose of a platform that unifies the tech market and simplies the trade of electronics. Our mission is to build the world’s most convenient way to trade, empowering worldwide users to technological innovation.
@@ -213,8 +210,6 @@ export default function Landing() {
         </div>
 
         <div className='container-box'>
-            <div className='box-element'>
-            </div>
             <div className='box-element'>
                 <div className='box'>
                     <h1>We Buy iPhones!</h1>

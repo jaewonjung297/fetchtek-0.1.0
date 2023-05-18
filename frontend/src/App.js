@@ -33,8 +33,8 @@ import Grding from './pages/Grading'
 import Footer from './components/Footer';
 import ContactUs from './pages/ContactUs';
 import FAQ from './pages/FAQ';
-import SellerSignUp from './pages/SellerSignUp';
-import SellSU from './pages/SellerSignUp';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 const Styles = styled.div`
   .navbar {
@@ -62,7 +62,14 @@ const Styles = styled.div`
     left: 25%;
     right: 25%;
   }
+  .dropdown-menu {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
   
+  .dropdown-menu.show {
+    opacity: 1;
+  }
 `;
 
 function App() {
@@ -103,54 +110,16 @@ function App() {
                         How It Works
                       </Nav.Link>
                     </Nav>
-
                     <Nav className = "p-2">
-                      <Nav.Link as = {Link}  to ="/faq" eventKey = '/faq' className = "nav-link">
-                        FAQ
-                      </Nav.Link>
-                    </Nav>
-
-                    <Nav className = "p-2">
-                      <Nav.Link as = {Link}  to ="/sellersignup" eventKey = '/sellersignup' className = "nav-link">
-                        Seller Sign Up
-                      </Nav.Link>
-                    </Nav>
-
-                    <Nav className = "p-2">
-                      <Nav.Link as = {Link}  to ="/ContactUs" eventKey = '/contactus' className = "nav-link">
-                        Contact Us
-                      </Nav.Link>
-                    </Nav>
-
-                    <Nav className = "p-2">
-                      <Nav.Link as = {Link} eventKey = '/cart' to="/cart" className ="nav-link">
-                          <ShoppingCartIcon />
-                          {cart.cartItems.length > 0 && (
-                            <Badge pill bg = "danger">
-                              {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
-                            </Badge>
-                          )}
-                      </Nav.Link>
-                    </Nav>
-
-                    <Nav className = "p-2">
-                    {userInfo ? (
-                      <NavDropDown title = {<PersonIcon />} id = "basic-nav-dropdown">
-                        <LinkContainer to = "/profile">
-                          <NavDropDown.Item>User Profile</NavDropDown.Item>
-                        </LinkContainer>
-                        <LinkContainer to = "/orderhistory">
-                          <NavDropDown.Item>Order History</NavDropDown.Item>
-                        </LinkContainer>
-                        <NavDropDown.Divider />
-                        <Nav.Link as = {Link} eventKey = '#signout' className = "p-3 dropdown-item" to = "#signout" onClick = {signOutHandler}>Sign Out</Nav.Link>
-                        
+                      <NavDropDown title = "Help" id = "basic-nav-dropdown">
+                          <LinkContainer to = "/FAQ">
+                            <NavDropDown.Item>FAQ</NavDropDown.Item>
+                          </LinkContainer>
+                          <LinkContainer to = "/ContactUs">
+                            <NavDropDown.Item>Contact Us</NavDropDown.Item>
+                          </LinkContainer>
                       </NavDropDown>
-                    ) : 
-                    (
-                    <Nav.Link as = {Link} eventKey = '/signin' className = "nav-link" to = "/signin">Sign In</Nav.Link>
-                    )}
-                  </Nav>
+                    </Nav>
                 </Navbar.Collapse>
               </Container>
             </Navbar>
@@ -178,7 +147,8 @@ function App() {
               <Route path = '/grading' element = {<Grding />} />
               <Route path = '/contactus' element = {<ContactUs />} />
               <Route path = '/faq' element = {<FAQ />} />
-              <Route path = '/sellersignup' element = {<SellSU />} />
+              <Route path = '/privacy' element = {<PrivacyPolicy />} />
+              <Route path = '/terms' element = {<TermsConditions />} />
             </Routes>
           </div>
         </main>

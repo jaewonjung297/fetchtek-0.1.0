@@ -49,6 +49,14 @@ const Styles = styled.div`
     font-size: 2em;
     color: #4092ff;
 }
+.fetchtek {
+    color: "#4092FF";
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.fetchtek:hover {
+    color: cyan;
+}
 `
 export default function Grading() {
   return (
@@ -56,7 +64,7 @@ export default function Grading() {
         <div className='title-container'>
             <div>
                 <p style = {{fontSize: "2em"}}>
-                    <span style = {{fontSize: "1.2em", color: "#4092FF"}}>FetchTek</span><br/>Grading Standards
+                    <a href = '/' className = "fetchtek">FetchTek</a><br/>Grading Standards
                 </p>
                 <p style = {{maxWidth: "20em"}}>
                     With FetchTek, you are guarnteed quality. 
