@@ -33,6 +33,8 @@ import Grding from './pages/Grading'
 import Footer from './components/Footer';
 import ContactUs from './pages/ContactUs';
 import FAQ from './pages/FAQ';
+import SellerSignUp from './pages/SellerSignUp';
+import SellSU from './pages/SellerSignUp';
 
 const Styles = styled.div`
   .navbar {
@@ -109,6 +111,12 @@ function App() {
                     </Nav>
 
                     <Nav className = "p-2">
+                      <Nav.Link as = {Link}  to ="/sellersignup" eventKey = '/sellersignup' className = "nav-link">
+                        Seller Sign Up
+                      </Nav.Link>
+                    </Nav>
+
+                    <Nav className = "p-2">
                       <Nav.Link as = {Link}  to ="/ContactUs" eventKey = '/contactus' className = "nav-link">
                         Contact Us
                       </Nav.Link>
@@ -170,6 +178,7 @@ function App() {
               <Route path = '/grading' element = {<Grding />} />
               <Route path = '/contactus' element = {<ContactUs />} />
               <Route path = '/faq' element = {<FAQ />} />
+              <Route path = '/sellersignup' element = {<SellSU />} />
             </Routes>
           </div>
         </main>
