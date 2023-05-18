@@ -31,6 +31,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import Landing from './pages/Landing';
 import Grding from './pages/Grading'
 import Footer from './components/Footer';
+import ContactUs from './pages/ContactUs';
 
 const Styles = styled.div`
   .navbar {
@@ -107,6 +108,12 @@ function App() {
                     </Nav>
 
                     <Nav className = "p-2">
+                      <Nav.Link as = {Link}  to ="/ContactUs" eventKey = '/contactus' className = "nav-link">
+                        Contact Us
+                      </Nav.Link>
+                    </Nav>
+
+                    <Nav className = "p-2">
                       <Nav.Link as = {Link} eventKey = '/cart' to="/cart" className ="nav-link">
                           <ShoppingCartIcon />
                           {cart.cartItems.length > 0 && (
@@ -160,6 +167,7 @@ function App() {
               <Route path = '/quoteprice' element = {<PricePage />} />
               <Route path = '/' element = {<Landing />} />
               <Route path = '/grading' element = {<Grding />} />
+              <Route path = '/contactus' element = {<ContactUs />} />
             </Routes>
           </div>
         </main>
