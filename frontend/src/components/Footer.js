@@ -128,6 +128,7 @@ export default function Footer() {
                         id="emailInput"
                         value={email}
                         style={{ width: '300px', height: '40px', fontSize: '16px' }}
+                        placeholder = "Enter Your Email"
                         onChange={handleEmailChange}
                     />
                     <div className = 'button_small'>

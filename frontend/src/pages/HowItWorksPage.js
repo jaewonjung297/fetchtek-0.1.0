@@ -4,6 +4,7 @@ import Btn from '../components/Btn'
 import styled from 'styled-components'
 
 const Styles = styled.div`
+scroll-behavior: smooth;
 .button_small {
     display: flex;
     justify-content: center;
@@ -33,6 +34,28 @@ const Styles = styled.div`
     display: flex;
     flex-direction: column;
 }
+.arrow {
+    box-sizing: border-box;
+    height: 5vw;
+    width: 5vw;
+    border-style: solid;
+    border-color: #4092ff;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+  }
+  
+  .arrow:hover {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
+  
+  .container {
+    margin: 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export default function HowItWorksPage() {
@@ -49,7 +72,14 @@ return (
         </div>
 
         <div className = 'buyback-container'>
-            <h2 style = {{fontSize: "3em", padding: "1em"}}>Bulk Buyback <br />Program</h2>
+            <div>
+                <h2 style = {{fontSize: "3em", padding: "1em"}}>Bulk Buyback <br />Program</h2>
+                <div class="container">
+                    <a data-scroll href="#full">
+                        <div class="arrow"></div>
+                    </a>
+                </div>
+            </div>
             <p style = {{maxWidth: "40em", padding: "1em"}}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.
             <br /><br />
@@ -59,7 +89,7 @@ return (
             </p>
         </div>
 
-        <div className='process-container'>
+        <div className='process-container' style = {{marginTop: "10em"}} id = "full">
             <h2 style = {{fontSize: "2em", padding: "1em"}}>The Process</h2>
         </div>
         <div className='process-container'>
