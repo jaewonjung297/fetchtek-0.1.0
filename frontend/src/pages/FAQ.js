@@ -115,10 +115,10 @@ export default function FAQ() {
                 <img src = {image} alt = "FAQ Graphic" style = {{width: "20em"}}/>
             </div>
             <div className = 'question-container'>
-                <Collapsible question = "Q: Are the prices negotiable?" answer = "Yes once you completed your submission, the sales team can negotiate the final price and send you an invoice." />
-                <Collapsible question = "Q: How long have you been in business?" answer = "FetchTek has been in business for 8 years. We have been registered as a LLC for 2 years" />
-                <Collapsible question = "Q: Why can I trust FetchTek?" answer = "We have many satisfied customers and we have years of experience in this industry." />
-                <Collapsible question = "Q: How does shipping work?" answer = "I don't know I will let my boss answer for me" />
+                <Collapsible question = "Q: Are the prices negotiable?" answer = "Yes! Negotiation is a big part of what we do here at FetchTek. Once you complete your sign up, the sales team can begin negotations on your order." />
+                <Collapsible question = "Q: How long have you been in business?" answer = "FetchTek has been in the IT buyback space for 8 years. We have been registered as a LLC for 2 years" />
+                <Collapsible question = "Q: How do I know that can I trust FetchTek?" answer = "Our company prides itself on taking care of our clients with full transparency of our processes. After helping so many companies in IT liquidation, we understand that trust is a large part of our industry and identity. Which is why we invest so much time, attention, and care in handling every device and payment for our clients. Our mission is to keep your business in good hands and good faith!" />
+                <Collapsible question = "Q: How does shipping & returns work?" answer = "Great question! After confirming all the devices in your order, we will disclose shipping cost to you and send you a label that would be used in sending the package directly to our facility. We are happy to return any device you wish to withhold from your order. We will always confirm if you would like to return any devices before we close on every transaction." />
             </div>
             <div className='more-container'>
                 <div className='ask-container'>
