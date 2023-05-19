@@ -87,6 +87,8 @@ export default function Footer() {
                 312 W Millbrook Road STE 121 Raleigh, NC 27609
                 <br/>
                 (919) 348-9881
+                <br/>
+                fetchtek@gmail.com
                 </p>
             </div>
             <div className = 'info-box' style = {{marginTop: "2em"}}>
