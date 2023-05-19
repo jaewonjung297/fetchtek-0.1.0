@@ -77,7 +77,7 @@ export default function Grading() {
                     <a href = '/' className = "fetchtek">FetchTek</a><br/>Grading Standards
                 </p>
                 <p style = {{maxWidth: "20em"}}>
-                    With FetchTek, you are guarnteed quality. 
+                    With FetchTek, you are guaranteed quality. 
                     Our experts thoroughly inspect each product, 
                     evaluating its physical condition, functionality, 
                     and overall quality. These grading standards determine 
