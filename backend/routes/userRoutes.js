@@ -4,7 +4,6 @@ import News from '../models/newsModel.js';
 import { isAuth, generateToken } from '../utils.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
-import { re } from 'mathjs';
 
 const userRouter = express.Router();
 
