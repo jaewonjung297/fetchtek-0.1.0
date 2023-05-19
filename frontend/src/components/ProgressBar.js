@@ -24,6 +24,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 30px;
 
 }
 .scroll-item {
@@ -134,7 +135,7 @@ export default function ProgressBar() {
                         you will receive a shipping label from us to directly send your package to us.
                         </p>
                     </div>
-                    <div className = {progressHeight > 80 && progressHeight < 94 ? 'scroll-item size' : 'scroll-item'}>
+                    <div className = {progressHeight > 96 && progressHeight < 106 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         <span>Inspection</span> & <span>Payment!</span>
                         </h3>

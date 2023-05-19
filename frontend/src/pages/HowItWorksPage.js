@@ -16,6 +16,10 @@ scroll-behavior: smooth;
     justify-content: space-evenly;
     margin-top: 10em;
     flex-wrap: wrap;
+
+    .span {
+        color: #4092ff;
+    }
 }
 .process-container {
     display: flex;
@@ -100,11 +104,13 @@ return (
                 </div>
             </div>
             <p style = {{maxWidth: "40em", padding: "1em"}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.
+            Our IT bulk buyback program allows corporations to maximize the value of their inventory by selling their
+            old <span>tek</span> for the best pricing. As an IT distribution center, we partner with other distributors, retailers and resellers so you don't 
+            have to. 
             <br /><br />
-            Fusce sit amet bibendum tortor, cursus pretium velit. Morbi porta tincidunt feugiat. In hac habitasse platea dictumst. Vivamus rhoncus erat metus. Donec malesuada sit amet ipsum tempor pulvinar. Morbi posuere maximus magna, eu lacinia odio fringilla a. Phasellus at nisl lorem. 
+            By providing corporations with enterprise-level solutions, we can help you focus more on running your business and less on liquidating old assets.
             <br /><br />
-            Sed eget dui purus. Ut et urna quam. Quisque dictum tortor placerat arcu rhoncus, et eleifend erat interdum. Pellentesque vitae felis lorem.
+            Your trash is our treasure! We take your old IT hardware and give it a new life in countries where <span>tek</span> is in demand!
             </p>
         </div>
 
