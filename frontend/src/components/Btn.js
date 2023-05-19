@@ -47,7 +47,7 @@ const Styles = styled.div`
 function Btn(props) {
     return (
         <Styles>
-          <Link to={props.link}>
+          <Link style = {{textDecoration: "none"}} to={props.link}>
             <button className="button-30">
               {props.title}
             </button>
