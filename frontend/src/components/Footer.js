@@ -112,6 +112,10 @@ export default function Footer() {
                 <h3>Site Links</h3>
                 <hr style = {{color: 'white'}}>
                 </hr>
+                <a href = '/grading'>Grading Process</a><br />
+                <a href = '/how'>How It Works</a><br />
+                <a href = '/faq'>Frequently Asked Questions</a><br />
+                <a href = '/contactus'>Contact Us</a><br />
                 <a href = '/privacy'>Privacy Policy</a><br />
                 <a href = '/terms'>Terms and Conditions</a>
             </div>

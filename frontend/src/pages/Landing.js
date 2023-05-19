@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import background from '../images/white-iphone.jpeg';
 import { Link } from 'react-router-dom';
@@ -200,7 +200,7 @@ export default function Landing() {
                 <div className='button-container'>
                     <Button>
                     <Link to="/how">
-                        <button className="button-30" role="button">
+                        <button className="button-30">
                         Learn More
                         </button>
                     </Link>
@@ -241,20 +241,20 @@ export default function Landing() {
                 <div className="container">
                     <div className="bubble">
                         <p>
-                        Great customer service very helpful polite n quick reasonable prices!
-                        <span className="detail">Mustafa Aljumayli</span>
+                        "Great customer service very helpful polite n quick reasonable prices!"
+                        <span className="detail">Naomi Mendoza Vargas</span>
                         </p>
                     </div>
                     <div className="bubble">
                         <p>
-                        Highly Recommend Fetchtek. They found me exactly what I wanted at a fair price when I was in a pinch. They will go out of their way to make sure your customer experience is the best. Defiantly will recommend and will be buying/trading from them in the future!
+                        "Highly Recommend Fetchtek. They found me exactly what I wanted at a fair price when I was in a pinch. They will go out of their way to make sure your customer experience is the best. Defiantly will recommend and will be buying/trading from them in the future!"
                         <span className="detail"> Byron Brewington</span>
                         </p>
                     </div>
                     <div className="bubble">
                         <p>
-                        Great customer service and phone looks brand new would recommend to anyone I know who wants affordable phones or even trade in there old phones!!
-                        <span className="detail">RPS</span>
+                        "Great customer service and phone looks brand new would recommend to anyone I know who wants affordable phones or even trade in there old phones!!"
+                        <span className="detail">Mary Santana</span>
                         </p>
                     </div>
                     </div>
