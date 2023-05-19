@@ -2,6 +2,7 @@ import React from 'react'
 import ProgressBar from '../components/ProgressBar'
 import Btn from '../components/Btn'
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet-async'
 
 const Styles = styled.div`
 scroll-behavior: smooth;
@@ -76,6 +77,9 @@ scroll-behavior: smooth;
 export default function HowItWorksPage() {
 return (
     <Styles>
+    <Helmet>
+        <title>How It Works</title>
+    </Helmet>
         <div style = {{display: "flex", justifyContent: "center"}}>
             <h2 className = "title" style = {{margin: "0em auto", fontSize: "3em"}}>How <a href = '/' className = "fetchtek">FetchTek</a> Works</h2>
         </div>

@@ -99,35 +99,48 @@ export default function ProgressBar() {
                 <div className = 'item-container'>
                     <div className = {progressHeight > 1 && progressHeight < 12 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
-                        Create Your <span>Seller</span> Account
+                        Sign Up With Us As a <span>Seller</span>
                         </h3>
-                        <p>Opening a seller account with FetchTek is just one click away!</p>
+                        <p>Opening a seller account with FetchTek is just one click away! After you create an account, our team will contact you to get started!</p>
                     </div>
                     <div className = {progressHeight > 16 && progressHeight < 36 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         Review Our <span>Grading Process</span>
                         </h3>
                         <p>Our certified experts have years of experience grading and rating used electronics. 
-                        Each unit is cosmetically graded per our grading guidelines to ensure quality consistency
+                        Each unit is cosmetically graded per our grading guidelines to ensure quality consistency. Please
+                        review all grading material and price sheets before you begin selling with us.
                         </p>
                     </div>
                     <div className = {progressHeight > 41 && progressHeight < 56 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         Start an <span>Order Request</span>
                         </h3>
-                        <p>Easily create an order request using our platform.</p>
+                        <p>Easily create an order request using our platform or directly get in touch with us on WhatsApp
+                        to get started on your first deal with FetchTek.</p>
                     </div>
                     <div className = {progressHeight > 61 && progressHeight < 74 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         Fill Out the <span>Order Details</span>
                         </h3>
-                        <p>Complete the details of the order.</p>
+                        <p>Send us all the devices you have ready to sell so we know how many and what devices to expect.
+                        Please let us know the model, storage size, and quantity of each device type.</p>
                     </div>
                     <div className = {progressHeight > 80 && progressHeight < 94 ? 'scroll-item size' : 'scroll-item'}>
                         <h3>
                         <span>Ship</span> Your Supply
                         </h3>
-                        <p>Send your units and receive money as soon as we review your order!</p>
+                        <p>Package your items with care, you can never use too much bubble wrapping. After confirming your order with us,
+                        you will receive a shipping label from us to directly send your package to us.
+                        </p>
+                    </div>
+                    <div className = {progressHeight > 80 && progressHeight < 94 ? 'scroll-item size' : 'scroll-item'}>
+                        <h3>
+                        <span>Inspection</span> & <span>Payment!</span>
+                        </h3>
+                        <p>As soon as we receive your order, we will begin inspection. Upon completing inspection, we will
+                         send you an inspection report and confirm the total payment amount. Then you get paid!
+                        </p>
                     </div>
                 </div>
             </div>
