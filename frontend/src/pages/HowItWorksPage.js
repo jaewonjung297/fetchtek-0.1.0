@@ -110,7 +110,7 @@ return (
             <br /><br />
             By providing corporations with enterprise-level solutions, we can help you focus more on running your business and less on liquidating old assets.
             <br /><br />
-            Your trash is our treasure! We take your old IT hardware and give it a new life in countries where <span>tek</span> is in demand!
+            We take your old IT hardware and give it a new life in countries where <span>tek</span> is in demand!
             </p>
         </div>
 
@@ -121,22 +121,22 @@ return (
             <div className='item'>
                 <h3><span>Step 1:</span> Contact Us</h3>
                 <hr/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.</p>
+                <p>Get in touch to begin your order form and confirm pricing of your devices.</p>
             </div>
             <div className='item'>
                 <h3><span>Step 2:</span> Ship Your Devices To Us</h3>
                 <hr/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.</p>
+                <p>Ship your devices to us in the appropriate box and packaging.</p>
             </div>
             <div className='item'>
-                <h3><span>Step 3:</span> Get Quote</h3>
+                <h3><span>Step 3:</span> Get Inspection Report</h3>
                 <hr/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est.</p>
+                <p>You will receive a final inspection report from us detailing all the devices received and graded by us.</p>
             </div>
             <div className='item'>
-                <h3><span>Step 4:</span> Receive A Cash Offer</h3>
+                <h3><span>Step 4:</span> Get Paid!</h3>
                 <hr/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer odio sapien, ultrices id pellentesque in, dignissim eu sem. Phasellus tincidunt, arcu eget suscipit ultricies, augue massa elementum magna, eget auctor lacus leo eu est..</p>
+                <p>Confirm final payment amount and get paid. It's that easy!</p>
             </div>
         </div>
     </Styles>
