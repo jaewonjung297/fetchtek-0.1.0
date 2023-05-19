@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import styled from 'styled-components';
 import image from '../images/phones.jpg';
+import { Helmet } from 'react-helmet-async';
 
 const ContactUsContainer = styled.div`
   max-width: 100%;
@@ -151,6 +152,9 @@ const ContactUs = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Contact Us</title>
+      </Helmet>
     <ContactUsContainer>
       <TitleBoxContainer>
        <img className="image" alt = "phone background" src={image}></img>

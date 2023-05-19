@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import background from '../images/white-iphone.jpeg';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Styles = styled.div`
     .container-box {
@@ -192,6 +193,11 @@ const Button = styled.div`
 export default function Landing() {
   return (
     <Styles>
+        <Helmet>
+            <title>
+                FetchTek
+            </title>
+        </Helmet>
         <div className='container-2'>
         <img src={background} alt="background" className="background-lg" style={{ width: '23em', height: 'auto', borderRadius: '3px'}} />
             <div className='element-2'>

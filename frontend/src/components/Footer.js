@@ -6,6 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import MailIcon from '@mui/icons-material/Mail';
 import logo from '../images/FetchTek Logo - TM (1).png';
+import { toast } from 'react-toastify';
 
 const Styles = styled.div`
 margin-top: 15em;
@@ -72,7 +73,13 @@ export default function Footer() {
 
     const handleSubmit = () => {
         // Perform email submission logic here
-        console.log('Submitted email:', email);
+        if (email.length === 0) {
+            toast.error("Enter an email");
+            return;
+        }
+        setEmail('');
+        toast.success("Subscribed!");
+        return;
     };
     const emailHandler = () => {
         var mailToLink = "mailto:fetchtek@gmail.com";

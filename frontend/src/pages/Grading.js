@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import image from '../images/background.webp'
 import Btn from '../components/Btn'
+import { Helmet } from 'react-helmet-async'
 
 const Styles = styled.div`
 @media (max-width: 800px) {
@@ -71,6 +72,9 @@ const Styles = styled.div`
 export default function Grading() {
   return (
     <Styles>
+        <Helmet>
+            <title>Grading Process</title>
+        </Helmet>
         <div className='title-container'>
             <div>
                 <p style = {{fontSize: "2em"}}>

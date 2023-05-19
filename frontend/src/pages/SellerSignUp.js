@@ -6,6 +6,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import axios from 'axios';
 import { getError } from '../utils';
+import { Helmet } from 'react-helmet-async';
 
 const ContactUsContainer = styled.div`
   max-width: 100%;
@@ -199,6 +200,9 @@ const SellerSignUp = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Seller Sign Up</title>
+      </Helmet>
     <ContactUsContainer id = "top">
       <TitleBoxContainer>
        <img className="image" src={image} alt = "background title"></img>

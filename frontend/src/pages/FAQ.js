@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Btn from '../components/Btn'
 import image from '../images/FAQ.png'
+import { Helmet } from 'react-helmet-async';
 
 const Styles = styled.div`
 .title-container {
@@ -107,6 +108,9 @@ const Collapsible = (props) => {
 export default function FAQ() {
     return (
         <Styles>
+            <Helmet>
+                <title>FAQ</title>
+            </Helmet>
             <div className='title-container'>
                 <img src = {image} alt = "FAQ Graphic" style = {{width: "20em"}}/>
             </div>
