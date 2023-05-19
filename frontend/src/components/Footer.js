@@ -12,7 +12,7 @@ import { getError } from '../utils';
 
 const Styles = styled.div`
 margin-top: 15em;
-background-color: #4092ff;
+background-color: #bababa;
 color: white;
 .news-container {
     margin-top: 2em;
