@@ -57,6 +57,16 @@ const Styles = styled.div`
 .fetchtek:hover {
     color: cyan;
 }
+.image {
+    width: 35em;
+    height: auto;
+    border-radius: 10px;
+    @media (max-width: 600px) {
+        width: 100%;
+        border-radius: 0px;
+        margin-bottom: 2em;
+    }
+}
 `
 export default function Grading() {
   return (
@@ -78,7 +88,7 @@ export default function Grading() {
                 </div>
             </div>
             
-            <img src = {image} position = "auto" alt = "FetchTek Logo" style = {{width: "35rem", height: "auto", borderRadius: "10px"}}/>
+            <img src = {image} position = "auto" alt = "FetchTek Logo" className = "image" />
         </div>
 
         <div className='grading-title'>
