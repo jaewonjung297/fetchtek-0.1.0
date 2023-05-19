@@ -86,7 +86,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
-      <ToastContainer position = "bottom-center" limit = {1} />
+      <ToastContainer position = "bottom-center" limit = {1} autoClose = "2000" hideProgressBar = "true"/>
         <header>
             <Styles>
             <Navbar collapseOnSelect expand = "lg">
@@ -114,7 +114,7 @@ function App() {
 
                     <Nav className = "p-2">
                       <Nav.Link as = {Link}  to ="/sellersignup" eventKey = '/sellersignup' className = "nav-link">
-                        Seller Sign Up
+                        Sell With Us
                       </Nav.Link>
                     </Nav>
                     <Nav className = "p-2">

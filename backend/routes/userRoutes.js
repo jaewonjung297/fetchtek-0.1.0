@@ -33,8 +33,18 @@ userRouter.post(
         const newUser = new User({
             name: req.body.name,
             email: req.body.email,
-            password: bcrypt.hashSync(req.body.password)
+            phone: req.body.phone,
         });
+        const existingUser = await User.findOne({ email: req.body.email });
+        if (existingUser) {
+            res.status(400).send({ message: 'Email is already registered' });
+            return;
+        }
+        const existingUser2 = await User.findOne({ phone: req.body.phone });
+        if (existingUser2) {
+            res.status(400).send({ message: 'Phone Number is already registered' });
+            return;
+        }
         const user = await newUser.save();
         res.send({
             _id: user._id,
