@@ -7,6 +7,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import MailIcon from '@mui/icons-material/Mail';
 import logo from '../images/FetchTek Logo - TM (1).png';
 import { toast } from 'react-toastify';
+import axios from 'axios';
+import { getError } from '../utils';
 
 const Styles = styled.div`
 margin-top: 15em;
@@ -71,13 +73,22 @@ export default function Footer() {
         setEmail(event.target.value);
     };
 
-    const handleSubmit = () => {
+    const handleSubmit =  async () => {
         // Perform email submission logic here
         if (email.length === 0) {
             toast.error("Enter an email");
             return;
         }
         setEmail('');
+        try {
+            await axios.post(
+                '/api/users/newsletter', {
+                    email
+                }
+            );
+        } catch (err) {
+            toast.error(getError(err));
+        }
         toast.success("Subscribed!");
         return;
     };

@@ -1,8 +1,10 @@
 import express from 'express';
 import User from '../models/userModel.js';
+import News from '../models/newsModel.js';
 import { isAuth, generateToken } from '../utils.js';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcryptjs';
+import { re } from 'mathjs';
 
 const userRouter = express.Router();
 
@@ -82,5 +84,17 @@ userRouter.put(
     })
   );
 
+userRouter.post(
+  '/newsletter',
+  expressAsyncHandler(async (req, res) => {
+    const newNewsletter = new News({
+      email: req.body.email,
+    });
+    const news = await newNewsletter.save();
+    res.send({
+      email: news.email,
+    })
+  })
+)
   
 export default userRouter;
