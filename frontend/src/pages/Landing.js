@@ -144,9 +144,9 @@ const Bubble = styled.div`
     border-radius: 0 0 40px 0;
   }
   
-  .container .bubble .detail {
+  .container .bubble span {
     font-style: italic;
-    display: inline;
+    margin-top: 10px;
     float: right;
   }
 `
@@ -241,20 +241,18 @@ export default function Landing() {
                 <div className="container">
                     <div className="bubble">
                         <p>
-                        "Great customer service very helpful polite n quick reasonable prices!"
-                        <span className="detail">Naomi Mendoza Vargas</span>
+                        "Great customer service very helpful polite n quick reasonable prices!" <br /><span>-Naomi Mendoza Vargas</span>
+                        <span className="detail"></span>
                         </p>
                     </div>
                     <div className="bubble">
                         <p>
-                        "Highly Recommend Fetchtek. They found me exactly what I wanted at a fair price when I was in a pinch. They will go out of their way to make sure your customer experience is the best. Defiantly will recommend and will be buying/trading from them in the future!"
-                        <span className="detail"> Byron Brewington</span>
+                        "Highly Recommend Fetchtek. They found me exactly what I wanted at a fair price when I was in a pinch. They will go out of their way to make sure your customer experience is the best. Defiantly will recommend and will be buying/trading from them in the future!" <br /><span>-Byron Brewington</span>
                         </p>
                     </div>
                     <div className="bubble">
                         <p>
-                        "Great customer service and phone looks brand new would recommend to anyone I know who wants affordable phones or even trade in there old phones!!"
-                        <span className="detail">Mary Santana</span>
+                        "Great customer service and phone looks brand new would recommend to anyone I know who wants affordable phones or even trade in their old phones!!"<br /><span>-Mary Santana</span>
                         </p>
                     </div>
                     </div>
